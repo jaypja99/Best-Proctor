@@ -146,11 +146,13 @@ Router.post(
   uploads.single('file'),
   async (req, res) => {
     try {
-      const {schoolName, contactNumber,addressLine,city,pinCode,adminName,adminNumber,email,username,password} = req.body;
+      const {schoolName,contactNumber,addressLine,State,city,pinCode,adminName,adminNumber,email,username,password} = req.body;
       const file = new School({
         schoolName,
+     //   schoolType,
         contactNumber,
         addressLine,
+        State,
         city,
         pinCode,
         adminName,

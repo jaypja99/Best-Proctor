@@ -12,10 +12,10 @@ const SchoolRegister = () => {
 
   const [state, setState] = useState({
     schoolName: '',
-   // schoolType: '',
+ //   schoolType: '',
     contactNumber: '',
     addressLine: '',
-  //  State: '',
+    State: '',
     city: '',
     pinCode: '',
     adminName: '',
@@ -42,10 +42,10 @@ const SchoolRegister = () => {
     try {
       const {
         schoolName,
-     //   schoolType,
+       // schoolType,
         contactNumber,
         addressLine,
-     //   State,
+        State,
         city,
         pinCode,
         adminName,
@@ -53,15 +53,15 @@ const SchoolRegister = () => {
         email,
         username,
         password } = state;
-      if (schoolName.trim() !== '' && contactNumber.trim() !== '' && addressLine.trim() !== '' && city.trim() !== ''  && pinCode.trim() !== ''  && adminName.trim() !== ''  && adminNumber.trim() !== '' && email.trim() !== '' && username.trim() !== '' && password.trim() !== '') {
+      if (schoolName.trim() !== '' &&  contactNumber.trim() !== '' && addressLine.trim() !== '' && State.trim() !== '' && city.trim() !== ''  && pinCode.trim() !== ''  && adminName.trim() !== ''  && adminNumber.trim() !== '' && email.trim() !== '' && username.trim() !== '' && password.trim() !== '') {
        
           const formData = new FormData();
        
-      //    formData.append('schoolType', schoolType);
+        //  formData.append('schoolType', schoolType);
           formData.append('schoolName', schoolName);
           formData.append('contactNumber', contactNumber);
           formData.append('addressLine', addressLine);
-     //     formData.append('State', State);
+          formData.append('State', State);
           formData.append('city', city);
           formData.append('pinCode', pinCode);
           formData.append('adminName', adminName);
@@ -81,10 +81,10 @@ const SchoolRegister = () => {
           });
           this.setState({
             schoolName: '',
-        //    schoolType: '',
+           // schoolType: '',
             contactNumber: '',
             addressLine: '',
-       //     State: '',
+            State: '',
             city: '',
             pinCode: '',
             adminName: '',
@@ -129,16 +129,16 @@ const SchoolRegister = () => {
               <div class="fielddiv">
                 <div class="privatediv">
                   <label class="container">Private
-                    <input type="radio" checked="checked" name="schoolType"required 
-                  //  value={state.schoolType} onChange={handleInputChange} 
-                  />
+                    <input type="radio" checked="checked" name="schoolType"required  
+              //      value={state.schoolType} onChange={handleInputChange}  
+                      />
                     <span class="checkmark"></span>
                   </label>
                 </div>
                 <div class="govermentdiv">
                   <label class="container">Goverment
                     <input type="radio" name="schoolType" required
-                  //   value={state.schoolType}     onChange={handleInputChange} 
+            //         value={state.schoolType}     onChange={handleInputChange} 
                      />
                     <span class="checkmark"></span>
                   </label>
@@ -159,9 +159,7 @@ const SchoolRegister = () => {
           <div class="fielddiv">
             <div class="statediv">
               <label >State<span class="required">*</span></label>
-              <input name="State" id="State" list="states"
-           //    required value={state.State}           onChange={handleInputChange} 
-               />
+              <input name="State" id="State" list="states"   required value={state.State}  onChange={handleInputChange}    />
               <datalist id="states">
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
