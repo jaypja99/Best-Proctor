@@ -8,7 +8,7 @@ import axios from 'axios';
 
 import { API_URL } from '../utils/constants';
 
-const Register = () => {
+const SellerRegister = () => {
   const [file, setFile] = useState(null); // state for storing actual image
   const [previewSrc, setPreviewSrc] = useState(''); // state for storing previewImage
   const [state, setState] = useState({
@@ -287,4 +287,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default SellerRegister;

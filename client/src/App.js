@@ -6,7 +6,7 @@ import ParentRegister from './pages/ParentRegister';
 import SellerRegister from './pages/SellerRegister';
 import Sellerdash from "./pages/Sellerdash";
 
-import Rg from './components/Upload_Achive'
+
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path='/SchoolRegister' exact render={props => <SchoolRegister {...props} />} />
           <Route path='/ParentRegister' exact render={props => <ParentRegister {...props} />} />
           <Route path='/SellerRegister' exact render={props => <SellerRegister {...props} />} />
-          <Route path='/register' exact render={props => <Rg {...props} />} />
+         
           <Route path='/sellerdashboard' exact render={props => <Sellerdash {...props} />} />
         </Switch>
       </BrowserRouter>

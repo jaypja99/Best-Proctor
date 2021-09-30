@@ -4,6 +4,7 @@ const multer = require('multer');
 const File = require('../models/file');
 const Files = require('../models/file_achive');
 const Seller = require('../models/seller')
+const School = require('../models/school')
 const Router = express.Router();
 
 const upload = multer({
@@ -136,6 +137,36 @@ Router.post(
       res.status(500).send(error.message);
     }
   }
+);
+
+
+
+Router.post(
+  '/School',
+  uploads.single('file'),
+  async (req, res) => {
+    try {
+      const {schoolName, contactNumber,addressLine,city,pinCode,adminName,adminNumber,email,username,password} = req.body;
+      const file = new School({
+        schoolName,
+        contactNumber,
+        addressLine,
+        city,
+        pinCode,
+        adminName,
+        adminNumber,
+        email,
+        username,
+        password
+       
+      });
+      await file.save();
+      res.send('file uploaded successfully.');
+    } catch (error) {
+      res.status(400).send('Error while uploading file. Try again later.');
+    }
+  },
+ 
 );
 
 Router.get('/getAllFiles', async (req, res) => {

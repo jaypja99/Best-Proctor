@@ -3,7 +3,6 @@ const path = require('path');
 const multer = require('multer');
 const File = require('../models/file');
 const router = express.Router()
-const signUpTemplateCopy = require('../models/signupmodels')
 const projectTemplateCopy = require('../models/project');
 const Achivement = require('../models/file_achive');
 
