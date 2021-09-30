@@ -1,0 +1,186 @@
+
+
+.sidebar1{
+  width: 220px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background: -webkit-linear-gradient(top right, #0a385a, #011036);
+  padding: 14px;
+  overflow: hidden; 
+  z-index: 99;
+  margin: 5px;
+  height: 17vh;
+  border-radius:15px;
+  transition: all 0.5s ease;
+  
+}
+
+.sidebar{
+    
+    width: 220px;
+    height: 80vh; 
+    background: -webkit-linear-gradient(top right, #0a385a, #011036);
+    overflow: hidden; 
+    z-index: 99;
+    margin: 5px;
+    color: #fff;
+    border-radius:15px;
+    transition: all 0.5s ease;
+    box-shadow:  10px rgb(0 0 0 / 0.2);
+  }
+
+.sidebar1 .logo-details{
+
+   
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .sidebar1 .logo-details .icon{
+    color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+  }
+  .sidebar1 .logo-details .logo_name{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .sidebar1 .logo-details .icon,
+  .sidebar1 .logo-details .logo_name{
+    opacity: 1;
+  }
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  padding-right:10px;
+  padding-left:10px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+
+.sidebar li a{
+ 
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #ffffff00;
+
+  
+  
+}
+.sidebar li a:hover{
+  background: rgb(228, 124, 86);
+  border-right: 5px solid white;
+  border-radius: 5px;
+
+}
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #ffffff;
+  
+}
+
+ul {
+    
+     padding:0px;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}

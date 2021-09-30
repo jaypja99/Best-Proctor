@@ -1,0 +1,114 @@
+.dashtop {
+    height: 60px;
+    min-height: 30px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    overflow: hidden;
+    z-index: 99;
+    margin: 5px;
+    width: 100vw;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.search {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+}
+
+.searchTerm {
+    width: 100%;
+    border-right: none;
+    padding: 5px;
+    background-color: rgb(236, 236, 236);
+    outline: none;
+    font-style: bold;
+    font-weight: 500;
+    padding-left: 20px;
+    color: #161616;
+}
+
+.searchTerm:focus {
+    color: rgb(228, 124, 86);
+}
+
+.searchButton {
+    width: 50px;
+    height: auto;
+    background: rgb(236, 236, 236);
+    text-align: center;
+    color: rgb(228, 124, 86);
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+.notification {
+    width: 50px;
+    background: rgb(236, 236, 236);
+    margin-left: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.notification i {
+    color: -webkit-linear-gradient(top right, #0a385a, #011036);
+    height: 60px;
+    min-width: 50px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.setting {
+    width: 50px;
+    background: rgb(236, 236, 236);
+    margin-left: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.setting i {
+    color: -webkit-linear-gradient(top right, #0a385a, #011036);
+    height: 60px;
+    min-width: 50px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.logoutbtn {
+
+    width: 100px;
+    background: rgb(236, 236, 236);
+    margin-left: 8px;
+    padding-left: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logoutbtn i{
+    color: -webkit-linear-gradient(top right, #0a385a, #011036);
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    padding-right: 10px;
+}
