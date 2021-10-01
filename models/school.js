@@ -7,6 +7,11 @@ const schoolSchema = mongoose.Schema(
       required: true,
       trim: true
     },
+    schoolType: {
+      type: String,
+      required: true,
+      trim: true
+    },
     contactNumber:{
       type: String,
       required: true,
@@ -18,7 +23,11 @@ const schoolSchema = mongoose.Schema(
       trim: true
     },
    
-   
+    State:{
+      type: String,
+      required: true,
+      trim: true
+    },
     city: {
       type: String,
       required: true

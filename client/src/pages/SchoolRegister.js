@@ -12,7 +12,7 @@ const SchoolRegister = () => {
 
   const [state, setState] = useState({
     schoolName: '',
- //   schoolType: '',
+    schoolType: '',
     contactNumber: '',
     addressLine: '',
     State: '',
@@ -42,7 +42,7 @@ const SchoolRegister = () => {
     try {
       const {
         schoolName,
-       // schoolType,
+        schoolType,
         contactNumber,
         addressLine,
         State,
@@ -53,11 +53,11 @@ const SchoolRegister = () => {
         email,
         username,
         password } = state;
-      if (schoolName.trim() !== '' &&  contactNumber.trim() !== '' && addressLine.trim() !== '' && State.trim() !== '' && city.trim() !== ''  && pinCode.trim() !== ''  && adminName.trim() !== ''  && adminNumber.trim() !== '' && email.trim() !== '' && username.trim() !== '' && password.trim() !== '') {
+      if (schoolName.trim() !== '' && schoolType.trim() !== '' &&  contactNumber.trim() !== '' && addressLine.trim() !== '' && State.trim() !== '' && city.trim() !== ''  && pinCode.trim() !== ''  && adminName.trim() !== ''  && adminNumber.trim() !== '' && email.trim() !== '' && username.trim() !== '' && password.trim() !== '') {
        
           const formData = new FormData();
        
-        //  formData.append('schoolType', schoolType);
+          formData.append('schoolType', schoolType);
           formData.append('schoolName', schoolName);
           formData.append('contactNumber', contactNumber);
           formData.append('addressLine', addressLine);
@@ -81,7 +81,7 @@ const SchoolRegister = () => {
           });
           this.setState({
             schoolName: '',
-           // schoolType: '',
+            schoolType: '',
             contactNumber: '',
             addressLine: '',
             State: '',
@@ -127,19 +127,16 @@ const SchoolRegister = () => {
             <label >School Type<span class="required">*</span></label>
             <div class="redioback">
               <div class="fielddiv">
+                
                 <div class="privatediv">
                   <label class="container">Private
-                    <input type="radio" checked="checked" name="schoolType"required  
-              //      value={state.schoolType} onChange={handleInputChange}  
-                      />
+                    <input type="radio"  name="schoolType" required  id="Private" value="Private"  onChange={handleInputChange} />
                     <span class="checkmark"></span>
                   </label>
                 </div>
                 <div class="govermentdiv">
                   <label class="container">Goverment
-                    <input type="radio" name="schoolType" required
-            //         value={state.schoolType}     onChange={handleInputChange} 
-                     />
+                    <input type="radio" name="schoolType" required  id="Goverment" value="Goverment"    onChange={handleInputChange}   />
                     <span class="checkmark"></span>
                   </label>
                 </div>
