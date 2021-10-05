@@ -46,32 +46,19 @@ function Dashnav() {
 
                         <li>
                             <a href="#">
-                                <i class='bx bx-user'></i>
-                                <span class="links_name">User</span>
+                            <i class="fas fa-shopping-bag"></i>
+                                <span class="links_name">Product</span>
                             </a>
-                            <span class="tooltip">User</span>
+                            <span class="tooltip">Product</span>
                         </li>
                         <li>
                             <a href="#">
-                                <i class='bx bx-chat'></i>
-                                <span class="links_name">Messages</span>
+                            <i class="fas fa-user-clock"></i>
+                                <span class="links_name">Pending Order</span>
                             </a>
-                            <span class="tooltip">Messages</span>
+                            <span class="tooltip">Pending Order</span>
                         </li>
-                        <li>
-                            <a href="#">
-                                <i class='bx bx-pie-chart-alt-2'></i>
-                                <span class="links_name">Analytics</span>
-                            </a>
-                            <span class="tooltip">Analytics</span>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class='bx bx-folder'></i>
-                                <span class="links_name">File Manager</span>
-                            </a>
-                            <span class="tooltip">Files</span>
-                        </li>
+                       
 
 
 
