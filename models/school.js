@@ -73,4 +73,4 @@ const schoolSchema = mongoose.Schema(
 
 
 
-module.exports = mongoose.model('School', schoolSchema);
+module.exports = mongoose.model('schools', schoolSchema);

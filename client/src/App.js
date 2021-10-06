@@ -9,7 +9,7 @@ import Sellerdash from "./pages/Sellerdash";
 
 
 function App() {
-  return (
+  return (  
     <div className="App">
      <BrowserRouter>
         <Switch>

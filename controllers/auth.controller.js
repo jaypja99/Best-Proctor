@@ -56,7 +56,7 @@ exports.registerController = (req, res) => {
               `
       };
   
-      sgMail
+      sgMailsub
         .send(emailData)
         .then(sent => {
           return res.json({
