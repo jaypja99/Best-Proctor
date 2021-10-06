@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
 
+
 const schoolSchema = mongoose.Schema(
   {
     schoolName: {
       type: String,
       required: true,
       trim: true
+     
     },
     schoolType: {
       type: String,
