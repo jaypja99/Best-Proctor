@@ -11,19 +11,10 @@ const Sellerdash = () => {
         <div className='rowR'>
         <Dashtop/>
         <div className='rowC'>
-        <div className='row1'>
+
 
         </div>
-        <div className='row2'>
-          
-        </div>
-        <div className='row3'>
-          
-        </div>
-        </div>
-        <div className='dash'>
-          
-          </div>
+     
         </div>
         </div>
         

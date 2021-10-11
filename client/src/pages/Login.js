@@ -69,7 +69,7 @@ function Login({ history }) {
                     </div>
                     <div class="form-container">
                         <div class="form-inner">
-                            <form action="#" class="login" onSubmit={handleSubmit}>
+                            <form saaction="#" class="login" onSubmit={handleSubmit}>
                                 <div class="field">
                                     <input type="email" placeholder="Email Address" required 
                                     onChange={handleChange('email')}
@@ -85,7 +85,8 @@ function Login({ history }) {
                                 </div>
                                 <div class="field btn">
                                     <div class="btn-layer"></div>
-                                    <input type="submit" value="Login" />
+                                    <NavLink to="sellerdashboard"><input type="submit" value="Login" /></NavLink>
+                                    
                                 </div>
                                 <div class="signup-link">
                                     Not a member?&nbsp;&nbsp;&nbsp;&nbsp;    <NavLink activeClassName="active" to="/SchoolRegister">Sign up</NavLink>
