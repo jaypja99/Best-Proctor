@@ -24,12 +24,12 @@ function Dashtop() {
                 </div>
 
                 <div class="logout">
+                <NavLink to="/">
                     <button type="submit" class="logoutbtn">
                         <i class='bx bx-log-out'></i>
                         Logout
-
-
                     </button>
+                </NavLink>
                 </div>
             </div>
 
