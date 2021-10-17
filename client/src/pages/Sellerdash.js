@@ -6,32 +6,29 @@ const Sellerdash = () => {
   return (
     <div className="Sellerdash">
       <div className='rowC'>
-
         <Dashnav />
-        <div className='rowR'>
+        <div className='sideright'>
           <Dashtop />
-          <div className='row1'>
+          <div className='dash'>
+            <div className='dashtop1'>
+              <div className='graph1'>
+              </div>
+              <div className='graph1'>
+              </div>
+              <div className='graph1'>
+              </div>
+            </div>
+            <div className='dashtop1'>
+              <div className='graph1'>
+              </div>
+              <div className='graph2'>
+              </div>
+            </div>
           </div>
-          <div className='rowC'>
-
-
-          </div>
-
-          <div className='row2'>
-
-          </div>
-          <div className='row3'>
-
-          </div>
-        </div>
-        <div className='dash'>
-
         </div>
       </div>
+
     </div>
-
-
-
 
   );
 };

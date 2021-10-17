@@ -8,12 +8,14 @@
     overflow: hidden;
     z-index: 99;
     margin: 5px;
-    width: 100%;
+    
 
     border-radius: 10px;
     transition: all 0.5s ease;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
+
+
 
 .search {
     
@@ -106,6 +108,8 @@
     align-items: center;
     position: relative;
     color: #fff;
+    text-decoration: none;
+    
 }
 
 .logoutbtn i{
@@ -114,4 +118,6 @@
     text-align: center;
     line-height: 60px;
     padding-right: 10px;
+    text-decoration: none;
 }
+

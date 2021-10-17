@@ -45,10 +45,11 @@ function Dashnav() {
 
 
                         <li>
-                            <a href="#">
+                            
+                        <NavLink to="/sellerdashboard/prduct">
                             <i class="fas fa-shopping-bag"></i>
                                 <span class="links_name">Product</span>
-                            </a>
+                         </NavLink>
                             <span class="tooltip">Product</span>
                         </li>
                         <li>
