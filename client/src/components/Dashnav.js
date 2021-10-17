@@ -46,7 +46,7 @@ function Dashnav() {
 
                         <li>
                             
-                        <NavLink to="/sellerdashboard/prduct">
+                        <NavLink to="/sellerdashboard/product">
                             <i class="fas fa-shopping-bag"></i>
                                 <span class="links_name">Product</span>
                          </NavLink>
