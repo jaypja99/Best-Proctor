@@ -36,7 +36,7 @@ const SellerDashNav = (props1) => {
                             </li>
 
                             <li>
-                                <NavLink to="/sellerdashboard/product" className={props1.f1}>
+                                <NavLink to="/sellerdashboard/order" className={props1.f1}>
                                     <i class='bx bx-cart-alt'></i>
                                     <span class="links_name">Order</span>
                                 </NavLink>
