@@ -15,7 +15,7 @@ const Sellerdash = () => {
           </div>
           
           <div className='dashtop1'>
-          <h3>Add Product</h3>
+       
 
             <div className='graph1'>
             </div>

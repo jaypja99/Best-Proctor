@@ -16,8 +16,9 @@ const SellerdashOrder = () => {
         <div className='sideright'>
           <Dashtop />
           <div className='dash'>
-            <div className='dashtop1'>
-
+          <h3>Add Product</h3>
+            <div className='dashtop2'>
+            
               <div className='graph1'>
               </div>
               <div className='graph1'>

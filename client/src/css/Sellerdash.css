@@ -19,6 +19,11 @@
     margin-right: 360px;
 }
 
+.dashtop2{
+    display: flex;
+    flex-direction: row;
+}
+
 .rightside{
     display: flex;
     flex: 1;
