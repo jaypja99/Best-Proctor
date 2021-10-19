@@ -37,14 +37,13 @@
     width: 100%;
     display: flex;
     padding: 10px;
-   
+    border-bottom: 3px solid #082032;
     justify-content: center;
     text-decoration: none;
 }
 
 .active {
-    border-bottom: 3px solid #fff;
-    border-bottom: 4px solid #fff;
+    border-bottom: 3px solid #082032;
     font-size: 16px;
 }
 

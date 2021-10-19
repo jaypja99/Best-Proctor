@@ -34,6 +34,12 @@ function App() {
           <Route path='/sellerdashboard' exact render={props => <Sellerdash {...props} />} />
           <Route path='/sellerdashboard/product' exact render={props => <SellerdashProduct {...props} />} />
           <Route path='/sellerdashboard/order' exact render={props => <SellerdashOrder {...props} />} />
+
+          
+          <Route path='/parentdashboard' exact render={props => <ParentDash {...props} />} />
+                    
+          <Route path='/teacherDashboard' exact render={props => <TeacherDash {...props} />} />
+   
         </Switch>
       </BrowserRouter>
     </div>
