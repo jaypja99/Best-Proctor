@@ -30,7 +30,7 @@
   overflow: hidden;
   max-width: 390px;
   margin-right: 40px;
-  background: -webkit-linear-gradient(top right, #1D4766, #011036);
+  background: #082032;
   padding: 55px 25px 55px 25px;
   border-radius: 15px;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
@@ -166,3 +166,4 @@ form .btn input[type="submit"] {
   font-weight: 500;
   cursor: pointer;
 }
+

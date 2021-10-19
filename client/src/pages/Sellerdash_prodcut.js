@@ -8,10 +8,7 @@ const Sellerdash = () => {
     <div className="Sellerdash">
       <div className='rowC'>
         <Dashnav 
-        f='shadows1 nonActive'
-        f1='shadows1 nonActive'
-        f2='shadows1 active'
-        f3='shadows1 nonActive'
+    
         />
         <div className='sideright'>
           <Dashtop />

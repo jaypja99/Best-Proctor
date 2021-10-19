@@ -29,30 +29,37 @@ const Dashnav = (props1) => {
                             <li>
                                 <NavLink to="/sellerdashboard/product" className={props1.f2}>
                                     <i class="bx bx-grid-alt"></i>
-                                    <span class="links_name">DashBoard</span>
+                                    <span class="links_name">Home</span>
                                 </NavLink>
                                 <span class="tooltip">Home</span>
                             </li>
                             <li>
                                 <NavLink to="/sellerdashboard/product" className={props1.f2}>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span class="links_name">Orders</span>
+                                    <i class="fas fa-newspaper"></i>
+                                    <span class="links_name">News Feeds</span>
                                 </NavLink>
-                                <span class="tooltip">Orders</span>
+                                <span class="tooltip">News Feeds</span>
                             </li>
                             <li>
                                 <NavLink to="/sellerdashboard/product" className={props1.f2}>
                                     <i class="fas fa-shopping-bag"></i>
-                                    <span class="links_name">Products</span>
+                                    <span class="links_name">Shopping</span>
                                 </NavLink>
-                                <span class="tooltip">Products</span>
+                                <span class="tooltip">Shopping</span>
                             </li>
                             <li>
                                 <NavLink to="/sellerdashboard/product" className={props1.f2}>
                                     <i class="fas fa-heart"></i>
-                                    <span class="links_name">Pending Orders</span>
+                                    <span class="links_name">Assignment</span>
                                 </NavLink>
-                                <span class="tooltip">Pending Orders</span>
+                                <span class="tooltip">Assignment</span>
+                            </li>
+                            <li>
+                                <NavLink to="/sellerdashboard/pending" className={props1.f3}>
+                                    <i class="fas fa-user-clock" ></i>
+                                    <span class="links_name">Fees Payment</span>
+                                </NavLink>
+                                <span class="tooltip">Fees Payment</span>
                             </li>
                         </div>
                     </ul>

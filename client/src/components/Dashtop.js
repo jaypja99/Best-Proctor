@@ -24,7 +24,7 @@ function Dashtop() {
                 </div>
 
                 <div class="logout">
-                <NavLink to="/">
+                <NavLink to="/" style={{ textDecoration: 'none'}}>
                     <button type="submit" class="logoutbtn">
                         <i class='bx bx-log-out'></i>
                         Logout
