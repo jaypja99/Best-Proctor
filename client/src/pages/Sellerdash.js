@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Sellerdash.css";
-import Dashnav from "../components/Dashnav";
+import Dashnav from "../components/SellerDashNav";
 import Dashtop from "../components/Dashtop";
 const Sellerdash = () => {
   return (

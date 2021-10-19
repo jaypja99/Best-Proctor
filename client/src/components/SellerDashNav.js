@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import "./Dashnav.css";
 
-const Dashnav = (props1) => {
+const SellerDashNav = (props1) => {
     return (
         <>
 
@@ -70,4 +70,4 @@ const Dashnav = (props1) => {
         </>
     );
 }
-export default Dashnav;
+export default SellerDashNav;
