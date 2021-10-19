@@ -61,13 +61,19 @@ function Login({ history }) {
             <div className="Login">
                 {isAuth() ? <Redirect to='/' /> : null}
                 <div className="forml">
-                <div class="wrapper ">
-                    <div class="title-text ">
-                        <div class="title login ">
-                             Administrator Login
+                <div class="wrapper">
+                    <div class="title-text">
+                        <div class="title login">
+                            Welcome Back
                         </div>
                     </div>
-                    
+                    <div>
+                    <Top_Category
+                        field='shadows nonActives'
+                        field1='shadows active'
+                        field2='shadows nonActives'
+                      />
+                    </div>
                     <div class="form-container">
                         <div class="form-inner">
                             <form saaction="#" class="login" onSubmit={handleSubmit}>
@@ -86,7 +92,7 @@ function Login({ history }) {
                                 </div>
                                 <div class="field btn">
                                     <div class="btn-layer"></div>
-                                    <NavLink to="/adminDash"><input type="submit" value="Login" /></NavLink>
+                                    <NavLink to="teacherDashboard"><input type="submit" value="Login" /></NavLink>
                                     
                                 </div>
                                 <div class="signup-link">

@@ -21,6 +21,14 @@
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
 }
+.reg_selections {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background:#082032;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+}
 
 
 
@@ -29,17 +37,22 @@
     width: 100%;
     display: flex;
     padding: 10px;
-    border-right: 2px solid lightgrey;
+   
     justify-content: center;
     text-decoration: none;
 }
 
 .active {
-    border-bottom: 3px solid #082032;
+    border-bottom: 3px solid #fff;
+    border-bottom: 4px solid #fff;
+    font-size: 16px;
 }
 
 .nonActive {
-    border-bottom: 3px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+.nonActives {
+    border-bottom: 2px solid #fff;
 }
 
 .register {

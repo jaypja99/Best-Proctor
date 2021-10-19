@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Sellerdash.css";
-import Dashnav from "../components/SellerDashNav";
+import Dashnav from "../components/TeacherDashnav";
 import Dashtop from "../components/Dashtop";
 const Sellerdash = () => {
   return (
@@ -15,9 +15,7 @@ const Sellerdash = () => {
             <div className='rightside'>
             </div>
           </div>
-          
           <div className='dashtop1'>
-       
 
             <div className='graph1'>
             </div>
