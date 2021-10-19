@@ -47,6 +47,11 @@
     font-size: 16px;
 }
 
+.actives {
+    border-bottom: 3px solid rgb(228, 124, 86);
+    font-size: 16px;
+}
+
 .nonActive {
     border-bottom: 2px solid #fff;
 }

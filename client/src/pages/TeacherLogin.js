@@ -70,7 +70,7 @@ function Login({ history }) {
                     <div>
                     <Top_Category
                         field='shadows nonActives'
-                        field1='shadows active'
+                        field1='shadows actives'
                         field2='shadows nonActives'
                       />
                     </div>
