@@ -6,6 +6,7 @@ const Files = require('../models/file_achive');
 const Seller = require('../models/seller')
 const School = require('../models/school')
 const Parent = require('../models/parent')
+const Product = require('../models/product')
 const Router = express.Router();
 
 const upload = multer({
@@ -175,6 +176,32 @@ Router.post(
   },
  
 );
+
+Router.post(
+  '/Product',
+  uploads.single('file'),
+  async (req, res) => {
+    try {
+      const {productname,schoolname,Standard,productcat,productsubcat,productquantity,productprice} = req.body;
+      const file = new Product({
+        productname,
+        schoolname,
+        Standard,
+        productcat,
+        productsubcat,
+        productquantity,
+        productprice
+       
+      });
+      await file.save();
+      res.send('file uploaded successfully.');
+    } catch (error) {
+      res.status(400).send('Error while uploading file. Try again later.');
+    }
+  },
+ 
+);
+
 
 Router.post(
   '/Parent',

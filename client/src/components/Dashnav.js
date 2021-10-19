@@ -3,9 +3,10 @@ import { Link, NavLink } from "react-router-dom";
 
 import "./Dashnav.css";
 
-function Dashnav() {
+const Dashnav = (props) => {
     return (
         <>
+
             <div class="sidebars">
                 <div class="sidebar1">
                     <div class="logo-details">
@@ -24,48 +25,48 @@ function Dashnav() {
                 <div class="sidebar">
 
                     <ul class="nav-list">
-                        <li>
+                        <div className="nav_selection">
+                            <li>
 
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class='bx bx-grid-alt'></i>
-                                <span class="links_name">Dashboard</span>
-                            </a>
-                            <span class="tooltip">Dashboard</span>
-                        </li>
+                                <NavLink to="/sellerdashboard" className={props.field}>
+                                    <i class='bx bx-grid-alt'></i>
+                                    <span class="links_name">Dashboard</span>
+                                </NavLink>
+                                <span class="tooltip">Dashboard</span>
+                            </li>
 
-                        <li>
-                            <a href="#">
-                                <i class='bx bx-cart-alt'></i>
-                                <span class="links_name">Order</span>
-                            </a>
-                            <span class="tooltip">Order</span>
-                        </li>
+                            <li>
+                                <NavLink to="/sellerdashboard/product" className={props.field1}>
+                                    <i class='bx bx-cart-alt'></i>
+                                    <span class="links_name">Order</span>
+                                </NavLink>
+                                <span class="tooltip">Order</span>
+                            </li>
 
 
-                        <li>
-                            
-                        <NavLink to="/sellerdashboard/product">
-                            <i class="fas fa-shopping-bag"></i>
-                                <span class="links_name">Product</span>
-                         </NavLink>
-                            <span class="tooltip">Product</span>
-                        </li>
-                        <li>
-                            <a href="#">
-                            <i class="fas fa-user-clock"></i>
-                                <span class="links_name">Pending Order</span>
-                            </a>
-                            <span class="tooltip">Pending Order</span>
-                        </li>
-                       
+                            <li>
+
+                                <NavLink to="/sellerdashboard/product" className={props.field2}>
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span class="links_name">Product</span>
+                                </NavLink>
+                                <span class="tooltip">Product</span>
+                            </li>
+                            <li>
+                                <NavLink to="/sellerdashboard/product" className={props.field3}>
+                                    <i class="fas fa-user-clock" ></i>
+                                    <span class="links_name">Pending Order</span>
+                                </NavLink>
+                                <span class="tooltip">Pending Order</span>
+                            </li>
 
 
 
+                        </div>
                     </ul>
                 </div>
             </div>
+
         </>
     );
 }

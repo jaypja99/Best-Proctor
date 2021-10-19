@@ -1,0 +1,132 @@
+
+.reg_selection {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+}
+
+
+
+
+.active {
+    border-bottom: 3px solid #082032;
+}
+
+.nonActive {
+    border-bottom: 3px solid #fff;
+}
+
+
+
+.button {
+    background-color: #FF4C29;
+}
+
+.fielddiv {
+    display: flex;
+    justify-content:space-evenly;
+  
+}
+
+.privatediv{
+    margin-right: 70px;
+}
+
+.statediv{
+    margin-right: 22px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+h3 {
+    font-weight: 900;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.registerbtn {
+
+    width: 200px;
+    background: #FF4C29;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+}
+
+
+.required {
+    color: red;
+  }
+
+.regbtndiv{
+    display: flex;
+  
+    flex-direction: row;
+    justify-content: left;
+     padding: 12px 10px;
+    
+}
+
+
+
+
+
+.inputcss{
+    background-color: #ffffee
+
+}
+
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px 80px;
+    grid-template-columns: auto auto auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+

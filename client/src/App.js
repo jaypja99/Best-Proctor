@@ -5,7 +5,7 @@ import SchoolRegister from './pages/SchoolRegister';
 import ParentRegister from './pages/ParentRegister';
 import SellerRegister from './pages/SellerRegister';
 import Sellerdash from "./pages/Sellerdash";
-
+import Sellerdash_product from "./pages/Sellerdash_prodcut";
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Route path='/SellerRegister' exact render={props => <SellerRegister {...props} />} />
          
           <Route path='/sellerdashboard' exact render={props => <Sellerdash {...props} />} />
-          <Route path='/sellerdashboard/product' exact render={props => <Sellerdash {...props} />} />
+          <Route path='/sellerdashboard/product' exact render={props => <Sellerdash_product {...props} />} />
         </Switch>
       </BrowserRouter>
     </div>
