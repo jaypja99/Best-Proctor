@@ -8,10 +8,10 @@ const Sellerdash = () => {
     <div className="Sellerdash">
       <div className='rowC'>
         <Dashnav 
-        field='shadows1 nonActive1'
-        field1='shadows1 nonActive1'
-        field2='shadows1 active1'
-        field3='shadows1 nonActive1'
+        f='shadows1 nonActive'
+        f1='shadows1 nonActive'
+        f2='shadows1 active'
+        f3='shadows1 nonActive'
         />
         <div className='sideright'>
           <Dashtop />

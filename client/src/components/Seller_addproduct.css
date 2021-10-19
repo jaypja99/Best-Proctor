@@ -1,9 +1,9 @@
 
-.reg_selection {
+.nav_selection {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-content: center;
-    background: white;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
 }
@@ -13,10 +13,11 @@
 
 .active {
     border-bottom: 3px solid #082032;
+    border-color: rgb(228, 124, 86);;
 }
 
 .nonActive {
-    border-bottom: 3px solid #fff;
+   background-color: orchid;
 }
 
 
@@ -87,7 +88,7 @@ input {
   
     flex-direction: row;
     justify-content: left;
-     padding: 12px 10px;
+    padding-top:10px;
     
 }
 

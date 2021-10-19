@@ -1,6 +1,6 @@
 .dashtop {
     height: 60px;
-    min-height: 30px;
+    
     background: white;
     display: flex;
     flex-direction: row;
@@ -8,7 +8,7 @@
     overflow: hidden;
     z-index: 99;
     margin: 5px;
-    
+    position: relative;
 
     border-radius: 10px;
     transition: all 0.5s ease;
@@ -21,6 +21,7 @@
     
     display: flex;
     width: 100%;
+        
     flex-direction: row;
     overflow: hidden;
     background-color: rgb(236, 236, 236);
@@ -54,14 +55,15 @@
 }
 
 .notification {
-    width: 50px;
+    
     background: rgb(236, 236, 236);
     margin-left: 8px;
     border-radius: 10px;
     cursor: pointer;
-    height: 50px;
+   
     display: flex;
     align-items: center;
+   
     position: relative;
 }
 
@@ -75,12 +77,12 @@
 }
 
 .setting {
-    width: 50px;
+   
     background: rgb(236, 236, 236);
     margin-left: 8px;
     border-radius: 10px;
     cursor: pointer;
-    height: 50px;
+    
     display: flex;
     align-items: center;
     position: relative;
@@ -88,7 +90,7 @@
 
 .setting i {
     color: -webkit-linear-gradient(top right, #0a385a, #011036);
-    height: 60px;
+ 
     min-width: 50px;
     font-size: 25px;
     text-align: center;
@@ -100,13 +102,13 @@
     width: 100px;
     background: rgb(228, 124, 86);
     margin-left: 8px;
-    padding-left: 10px;
+   
     border-radius: 10px;
     cursor: pointer;
-    height: 50px;
+    
     display: flex;
     align-items: center;
-    position: relative;
+    justify-content: center;
     color: #fff;
     text-decoration: none;
     
@@ -114,9 +116,9 @@
 
 .logoutbtn i{
     color: -webkit-linear-gradient(top right, #0a385a, #011036);
-    height: 60px;
+
     text-align: center;
-    line-height: 60px;
+    line-height: 50px;
     padding-right: 10px;
     text-decoration: none;
 }

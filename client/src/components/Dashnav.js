@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import "./Dashnav.css";
 
-const Dashnav = (props) => {
+const Dashnav = (props1) => {
     return (
         <>
 
@@ -28,7 +28,7 @@ const Dashnav = (props) => {
                         <div className="nav_selection">
                             <li>
 
-                                <NavLink to="/sellerdashboard" className={props.field}>
+                                <NavLink to="/sellerdashboard" className={props1.f}>
                                     <i class='bx bx-grid-alt'></i>
                                     <span class="links_name">Dashboard</span>
                                 </NavLink>
@@ -36,7 +36,7 @@ const Dashnav = (props) => {
                             </li>
 
                             <li>
-                                <NavLink to="/sellerdashboard/product" className={props.field1}>
+                                <NavLink to="/sellerdashboard/product" className={props1.f1}>
                                     <i class='bx bx-cart-alt'></i>
                                     <span class="links_name">Order</span>
                                 </NavLink>
@@ -46,14 +46,14 @@ const Dashnav = (props) => {
 
                             <li>
 
-                                <NavLink to="/sellerdashboard/product" className={props.field2}>
+                                <NavLink to="/sellerdashboard/product" className={props1.f2}>
                                     <i class="fas fa-shopping-bag"></i>
                                     <span class="links_name">Product</span>
                                 </NavLink>
                                 <span class="tooltip">Product</span>
                             </li>
                             <li>
-                                <NavLink to="/sellerdashboard/product" className={props.field3}>
+                                <NavLink to="/sellerdashboard/product" className={props1.f3}>
                                     <i class="fas fa-user-clock" ></i>
                                     <span class="links_name">Pending Order</span>
                                 </NavLink>

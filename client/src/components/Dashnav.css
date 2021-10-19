@@ -94,7 +94,7 @@
 
 
 .sidebar li a{
- 
+  margin: 5px;
   display: flex;
   height: 100%;
   width: 100%;
