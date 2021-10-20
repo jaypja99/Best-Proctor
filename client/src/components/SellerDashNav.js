@@ -34,10 +34,10 @@ const SellerDashNav = (props1) => {
                                 <span class="tooltip">Home</span>
                             </li>
                             <li>
-                                <NavLink to="/sellerdashboard/product" className={props1.f2}>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span class="links_name">Orders</span>
-                                </NavLink>
+                                <NavLink to="/sellerdashboard/order" className={props1.f1}>
+                                    <i class='bx bx-cart-alt'></i>
+                                    <span class="links_name">Order</span>
+                               </NavLink>
                                 <span class="tooltip">Orders</span>
                             </li>
                             <li>

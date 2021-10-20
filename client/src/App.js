@@ -13,7 +13,8 @@ import ParentRegister from './pages/ParentRegister';
 import SellerRegister from './pages/SellerRegister';
 
 import Sellerdash from "./pages/Sellerdash";
-import Sellerdash_product from "./pages/Sellerdash_prodcut";
+import SellerdashProduct from "./pages/SellerdashProduct";
+import SellerdashOrder from "./pages/SellerdashOrder";
 
 
 
@@ -30,14 +31,15 @@ function App() {
           <Route path='/ParentRegister' exact render={props => <ParentRegister {...props} />} />
           <Route path='/SellerRegister' exact render={props => <SellerRegister {...props} />} />
          
-          <Route path='/admin' exact render={props => <Login {...props} />} />
-          <Route path='/adminDash' exact render={props => <AdminDash {...props} />} />
-          <Route path='/sellerDashboard' exact render={props => <Sellerdash {...props} />} />
-          <Route path='/parentDashboard' exact render={props => <ParentDash {...props} />} />
+          <Route path='/sellerdashboard' exact render={props => <Sellerdash {...props} />} />
+          <Route path='/sellerdashboard/product' exact render={props => <SellerdashProduct {...props} />} />
+          <Route path='/sellerdashboard/order' exact render={props => <SellerdashOrder {...props} />} />
+
+          
+          <Route path='/parentdashboard' exact render={props => <ParentDash {...props} />} />
+                    
           <Route path='/teacherDashboard' exact render={props => <TeacherDash {...props} />} />
-
-          <Route path='/sellerdashboard/product' exact render={props => <Sellerdash_product {...props} />} />
-
+   
         </Switch>
       </BrowserRouter>
     </div>

@@ -3,7 +3,7 @@ import "../css/Sellerdash.css";
 import Dashnav from "../components/SellerDashNav";
 import Dashtop from "../components/Dashtop";
 import Seller_addproduct from "../components/Seller_addproduct";
-const Sellerdash = () => {
+const SellerdashProduct = () => {
   return (
     <div className="Sellerdash">
       <div className='rowC'>
@@ -22,4 +22,4 @@ const Sellerdash = () => {
   );
 };
 
-export default Sellerdash;
+export default SellerdashProduct;
