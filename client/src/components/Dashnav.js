@@ -27,18 +27,18 @@ const Dashnav = (props1) => {
                     <ul class="nav-list">
                         <div className="nav_selection">
                             <li>
-                                <NavLink to="/sellerdashboard/product" className={props1.f2}>
+                                <NavLink to="/sellerdashboard/product" className="abc">
                                     <i class="bx bx-grid-alt"></i>
                                     <span class="links_name">DashBoard</span>
                                 </NavLink>
-                                <span class="tooltip">Home</span>
+                                <span class="tooltip">DashBoard</span>
                             </li>
                             <li>
-                                <NavLink to="/sellerdashboard/product" className={props1.f2}>
+                                <NavLink to="/admin/schoolReq" className={props1.f2}>
                                     <i class="fas fa-shopping-cart"></i>
-                                    <span class="links_name">Orders</span>
+                                    <span class="links_name">School Request</span>
                                 </NavLink>
-                                <span class="tooltip">Orders</span>
+                                <span class="tooltip">School Request    </span>
                             </li>
                             <li>
                                 <NavLink to="/sellerdashboard/product" className={props1.f2}>
@@ -48,7 +48,7 @@ const Dashnav = (props1) => {
                                 <span class="tooltip">Products</span>
                             </li>
                             <li>
-                                <NavLink to="/sellerdashboard/product" className={props1.f2}>
+                                <NavLink to="/admin/schoolReq" className={props1.f2}>
                                     <i class="fas fa-heart"></i>
                                     <span class="links_name">Pending Orders</span>
                                 </NavLink>
