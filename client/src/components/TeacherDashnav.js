@@ -48,7 +48,7 @@ const Dashnav = (props1) => {
                                 <span class="tooltip">Grant Access</span>
                             </li>
                             <li>
-                                <NavLink to="/sellerdashboard/product" className={props1.f2}>
+                                <NavLink to="/teacherDashboard/addAss" className={props1.f2}>
                                     <i class="fas fa-heart"></i>
                                     <span class="links_name">Add Assignment</span>
                                 </NavLink>

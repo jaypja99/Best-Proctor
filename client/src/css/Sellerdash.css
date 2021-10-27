@@ -72,6 +72,17 @@
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
+.fullback{
+    display: flex;
+    width: 100%;
+    margin: 5px;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
 .dashtop2{
     display: flex;
     flex-direction: column;
@@ -95,14 +106,15 @@
 
 }
 .box {
-    margin: auto;
-    margin-top: 50px;
+    
+    border-radius: 10px;
+    margin: 10px;
     border-collapse: collapse;
   }
   table,
   td {
     background-color: #fff;
-  
+    
     padding: 10px;
   }
   th {
@@ -112,8 +124,11 @@
     color: white;
     text-align: center;
     position: sticky;
+    
+    
   }
   table {
+    border-radius: 10px;
     overflow-y: scroll;
     border-collapse: collapse;
     box-shadow: -10px 9px 31px 0px rgba(0, 0, 0, 0.43);
@@ -122,7 +137,7 @@
   }
   .wrappers {
       border: 1px solid #ddd;
-      
+      border-radius: 10px;
       height: 450px;
 
     }
