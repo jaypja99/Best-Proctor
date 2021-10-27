@@ -102,10 +102,15 @@
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
-  background: #ffffff00;
+ 
 
   
   
+}
+.abc{
+  background: rgb(228, 124, 86);
+  border-right: 5px solid white;
+  border-radius: 5px;
 }
 
 .sidebar li a:hover{

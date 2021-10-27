@@ -29,8 +29,28 @@
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
 }
+.float_right{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  right:0;
+  top:0;
+  position: absolute;
+}
+.input[type=submit]{
+width: 100px;
+background: rgb(228, 124, 86);
+margin-left: 8px;
 
+border-radius: 10px;
+cursor: pointer;
 
+display: flex;
+align-items: center;
+justify-content: center;
+color: #fff;
+text-decoration: none;
+}
 
 .shadows {
     height: 100%;

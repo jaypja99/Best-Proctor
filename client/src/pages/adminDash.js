@@ -1,20 +1,20 @@
 import React from "react";
 import "../css/Sellerdash.css";
-import Dashnav from "../components/SellerDashNav";
+import Dashnav from "../components/Dashnav";
 import Dashtop from "../components/Dashtop";
 const Sellerdash = () => {
   return (
     <div className="Sellerdash">
       <div className='rowC'>
-        <Dashnav />
+        <Dashnav 
+        f1="abc"/>
         <div className='sideright'>
           <Dashtop />
           <div className='dash'>
             <div className='dashtop1'>
               <div className='graph1'>
               </div>
-              <div className='graph1'>
-              </div>
+             
               <div className='graph1'>
               </div>
             </div>
