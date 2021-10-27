@@ -2,6 +2,7 @@ import React from "react";
 import "../css/Sellerdash.css";
 import Dashnav from "../components/ParentDashnav";
 import Dashtop from "../components/Dashtop";
+import Timetable from '../images/1.png';
 const Sellerdash = () => {
   return (
     <div className="Sellerdash">
@@ -11,24 +12,11 @@ const Sellerdash = () => {
         />
         <div className='sideright'>
           <Dashtop />
-          <div>
-            <div className='rightside'>
-            </div>
-          </div>
-          <div className='dashtop1'>
+         
+          <div className='fullback'>
 
-            <div className='graph1'>
-            </div>
-            <div className='graph1'>
-            </div>
-            <div className='graph1'>
-            </div>
-          </div>
-          <div className='dashtop2'>
-            <div className='graph2'>
-            </div>
-            <div className='graph2'>
-            </div>
+          <img className="preview-image" src={Timetable} alt="Preview" />
+
            
           </div>
         </div>

@@ -7,6 +7,7 @@ const Seller = require('../models/seller')
 const School = require('../models/school')
 const Parent = require('../models/parent')
 const Product = require('../models/product')
+const Assignment = require('../models/assignment')
 const Router = express.Router();
 
 const upload = multer({
@@ -129,6 +130,32 @@ Router.post(
             email,
             username,
             password,
+        file_path: path,
+        file_mimetype: mimetype
+      });
+      await file.save();
+      res.send('file uploaded successfully.');
+    } catch (error) {
+      res.status(400).send('Error while uploading file. Try again later.');
+    }
+  },
+  (error, req, res, next) => {
+    if (error) {
+      res.status(500).send(error.message);
+    }
+  }
+);
+
+Router.post(
+  '/assignment',
+  uploads.single('file'),
+  async (req, res) => {
+    try {
+      const {Standard,Subjects} = req.body;
+      const { path, mimetype } = req.file;
+      const file = new Assignment({
+        Subjects,  
+        Standard,  
         file_path: path,
         file_mimetype: mimetype
       });

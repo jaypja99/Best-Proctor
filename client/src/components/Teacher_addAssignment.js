@@ -2,20 +2,16 @@ import React, { useState, useRef } from 'react';
 import "../components/Seller_addproduct.css";
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import axios from 'axios';
+import Dropzone from 'react-dropzone';
 
 import { API_URL } from '../utils/constants';
 
 
 const Teacher_addAssignment = () => {
-
+    const [file, setFile] = useState(null); // state for storing actual image
     const [state, setState] = useState({
-        productname: '',
-        schoolname: '',
         Standard: '',
-        productcat: '',
-        productsubcat: '',
-        productquantity: '',
-        productprice: ''
+        Subjects: ''
     });
     const [errorMsg, setErrorMsg] = useState('');
 
@@ -34,44 +30,36 @@ const Teacher_addAssignment = () => {
 
         try {
             const {
-                productname,
-                schoolname,
                 Standard,
-                productcat,
-                productsubcat,
-                productquantity,
-                productprice } = state;
-            if (productname.trim() !== '' && schoolname.trim() !== '' && Standard.trim() !== '' && productcat.trim() !== '' && productsubcat.trim() !== '' && productquantity.trim() !== '' && productprice.trim() !== '') {
-
-                const formData = new FormData();
-
-                formData.append('productname', productname);
-                formData.append('schoolname', schoolname);
-                formData.append('Standard', Standard);
-                formData.append('productcat', productcat);
-                formData.append('productsubcat', productsubcat);
-                formData.append('productquantity', productquantity);
-                formData.append('productprice', productprice);
+                Subjects
+                 } = state;
+            if (Subjects.trim() !== '' && Standard.trim()) {
+                if (file) {
+                    const formData = new FormData();
+                    formData.append('file', file);
+                    formData.append('Standard', Standard);
+                    formData.append('Subjects', Subjects);
 
 
 
-                setErrorMsg('');
-                await axios.post(`${API_URL}/Product`, formData, {
-                    headers: {
-                        'Content-Type': 'multipart/form-data'
-                    }
+                    setErrorMsg('');
+                    await axios.post(`${API_URL}/assignment`, formData, {
+                        headers: {
+                            'Content-Type': 'multipart/form-data'
+                        }
 
-                });
-                this.setState({
-                    productname: '',
-                    schoolname: '',
-                    Standard: '',
-                    productcat: '',
-                    productsubcat: '',
-                    productquantity: '',
-                    productprice: ''
-                })
+                    });
+                    this.setState({
+                        Standard: '',
+                        Subjects: ''
+                    })
 
+                }
+                else {
+                    setErrorMsg('Please select a file to add.');
+                }
+            } else {
+                setErrorMsg('Please enter all the field values.');
             }
         } catch (error) {
             error.response && setErrorMsg(error.response.data);
@@ -79,34 +67,25 @@ const Teacher_addAssignment = () => {
 
     };
 
+    const onDrop = (files) => {
+        const [uploadedFile] = files;
+        setFile(uploadedFile);
 
+        const fileReader = new FileReader();
+      
+        fileReader.readAsDataURL(uploadedFile);
+      
+        dropRef.current.style.border = '2px dashed #e9ebeb';
+    };
 
     return (
-        <div className="Seller_addproduct">
+        <div className="Teacher_addproduct">
             <Form
-            onSubmit={handleOnSubmit}
+                onSubmit={handleOnSubmit}
             >
-                <h3>Add Product</h3>
+                <h3>Add Assignment</h3>
                 <div class="grid-container">
-                    <div>
-                        <label class="formlabel">Product Name<span class="required">*</span></label>
-                        <input type="text"
-                            required
-                            name="productname" value={state.productname} onChange={handleInputChange}
-                        />
-                    </div>
 
-                    <div>
-                        <label >School name<span class="required">*</span></label>
-                        <input name="schoolname" id="schoolname" list="names"
-                            required value={state.schoolname} onChange={handleInputChange}
-                        />
-                        <datalist id="names">
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                        </datalist>
-                    </div>
                     <div>
                         <label >Standard<span class="required">*</span></label>
                         <input name="Standard" id="Standard" list="standards"
@@ -127,55 +106,43 @@ const Teacher_addAssignment = () => {
                             <option value="Twelfth">Twelfth</option>
                         </datalist>
                     </div>
-                </div>
-
-                <div class="grid-container">
 
                     <div>
-                        <label >Product Category<span class="required">*</span></label>
-                        <input name="productcat" id="productcat" list="cates"
+                        <label >Subjects<span class="required">*</span></label>
+                        <input name="Subjects" id="Subjects" list="cates"
                             required value={state.productcat} onChange={handleInputChange}
                         />
                         <datalist id="cates">
-                            <option value="T-shirts">T-shirts</option>
-                            <option value="Jackets">Jackets</option>
-                            <option value="Accessories">Accessories</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="English">English</option>
+                            <option value="Gujarati">Gujarati</option>
+                            <option value="Maths">Maths</option>
+                            <option value="Drawing">Drawing</option>
+                            <option value="Computer">Computer</option>
+                            <option value="Sunskrit">Sunskrit</option>
+                            <option value="Science">Science</option>
+                            <option value="Social Science">Social Science</option>
                         </datalist>
                     </div>
 
-
-                    <div>
-                        <label >Product Sub Category<span class="required">*</span></label>
-                        <input name="productsubcat" id="productsubcat" list="subcates"
-                            required value={state.productsubcat} onChange={handleInputChange}
-                        />
-                        <datalist id="subcates">
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                        </datalist>
-                    </div>
                 </div>
 
                 <div class="grid-container">
-                    <div>
-                        <label class="formlabel">Product Quantity<span class="required">*</span></label>
-                        <input type="text"
-                            required
-                            name="productquantity"
-                            value={state.productquantity} onChange={handleInputChange}
-                        />
-                    </div>
-
-                    <div>
-                        <label class="formlabel">Product Price<span class="required">*</span></label>
-                        <input type="text"
-                            required
-                            name="productprice"
-                            value={state.productprice} onChange={handleInputChange}
-                        />
-                    </div>
+                    <Dropzone onDrop={onDrop} className="abc">
+                        {({ getRootProps, getInputProps }) => (
+                            <div {...getRootProps({ className: 'drop-zone abc' })} ref={dropRef}>
+                                <input {...getInputProps()} />
+                                <p>Drag and drop a file OR click here to select a file</p>
+                                {file && (
+                                    <div>
+                                        <strong>Selected file:</strong> {file.name}
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    </Dropzone>
                 </div>
+
 
                 <div class="regbtndiv">
                     <button type="submit" class="registerbtn">

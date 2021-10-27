@@ -2,7 +2,7 @@ import React from "react";
 import "../css/Sellerdash.css";
 import Dashnav from "../components/TeacherDashnav";
 import Dashtop from "../components/Dashtop";
-import Seller_addproduct from "../components/Seller_addproduct";
+import Teacher_addAssignment from "../components/Teacher_addAssignment";
 const TeacherdashAssignment = () => {
   return (
     <div className="Sellerdash">
@@ -13,7 +13,7 @@ const TeacherdashAssignment = () => {
         <div className='sideright'>
           <Dashtop />
           <div className='dash'>
-            <Seller_addproduct/>
+            <Teacher_addAssignment/>
             </div>
           </div>
         </div>
