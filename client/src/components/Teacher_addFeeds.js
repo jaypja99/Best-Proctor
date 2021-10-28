@@ -95,7 +95,7 @@ const Teacher_addFeeds = () => {
             <Form
                 onSubmit={handleOnSubmit}
             >
-                <h3>Add Assignment</h3>
+                <h3>Upload New Feeds</h3>
                 <div className="Sellerdash">
                     <div className='rowC'>
                         <div>
