@@ -27,7 +27,7 @@ const SellerDashNav = (props1) => {
                     <ul class="nav-list">
                         <div className="nav_selection">
                             <li>
-                                <NavLink to="/sellerdashboard/product" className={props1.f2}>
+                                <NavLink to="/sellerdashboard" className={props1.f2}>
                                     <i class="bx bx-grid-alt"></i>
                                     <span class="links_name">DashBoard</span>
                                 </NavLink>

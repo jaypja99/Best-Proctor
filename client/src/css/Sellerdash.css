@@ -65,7 +65,22 @@
     display: flex;
     width: 100%;
     margin: 5px;
+<<<<<<< HEAD
     height: 100%;
+=======
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.fullback{
+    display: flex;
+    
+    margin: 5px;
+    height: 85vh;
+>>>>>>> 5ce89727964a87018ea8b00c21f82e79a960b312
     background-color: white;
     border-radius: 10px;
     transition: all 0.5s ease;
@@ -78,6 +93,16 @@
     margin-right: 370px;
     height: 67vh;
     justify-content: space-evenly;
+}
+
+.preview-image{
+    float: center;
+    flex-direction:column;
+    margin: 10px;
+    justify-content: center;
+   
+   
+   
 }
 
 .graph2{
@@ -95,14 +120,15 @@
 
 }
 .box {
-    margin: auto;
-    margin-top: 50px;
+    
+    border-radius: 10px;
+    margin: 10px;
     border-collapse: collapse;
   }
   table,
   td {
     background-color: #fff;
-  
+    
     padding: 10px;
   }
   th {
@@ -112,14 +138,24 @@
     color: white;
     text-align: center;
     position: sticky;
+    
+    
   }
   table {
+    border-radius: 10px;
     overflow-y: scroll;
     border-collapse: collapse;
     box-shadow: -10px 9px 31px 0px rgba(0, 0, 0, 0.43);
     -webkit-box-shadow: -10px 9px 31px 0px rgba(0, 0, 0, 0.43);
     -moz-box-shadow: -10px 9px 31px 0px rgba(0, 0, 0, 0.43);
   }
+<<<<<<< HEAD
+=======
+  .wrappers {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      height: 450px;
+>>>>>>> 5ce89727964a87018ea8b00c21f82e79a960b312
 
   th{
       top: 0;

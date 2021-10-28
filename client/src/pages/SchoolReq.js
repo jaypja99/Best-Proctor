@@ -28,7 +28,7 @@ const Sellerdash = () => {
           <Dashtop />
           <div className='dash'>
             <div className='dashtop3'>
-              <div className='graph1'>
+              <div className='fullback'>
                 <table className="box">
                   <div>
                     <thead>
