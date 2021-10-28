@@ -66,6 +66,10 @@ const schoolSchema = mongoose.Schema(
     role:{
         type: String,
         default:'School'
+    },
+    valid:{
+      type:Boolean,
+      default:false
     }
   },
   {

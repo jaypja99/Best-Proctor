@@ -65,7 +65,7 @@
     display: flex;
     width: 100%;
     margin: 5px;
-    height: 535px;
+    height: 100%;
     background-color: white;
     border-radius: 10px;
     transition: all 0.5s ease;
@@ -120,12 +120,7 @@
     -webkit-box-shadow: -10px 9px 31px 0px rgba(0, 0, 0, 0.43);
     -moz-box-shadow: -10px 9px 31px 0px rgba(0, 0, 0, 0.43);
   }
-  .wrappers {
-      border: 1px solid #ddd;
-      
-      height: 450px;
 
-    }
   th{
       top: 0;
       position:sticky;
