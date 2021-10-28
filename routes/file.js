@@ -8,6 +8,7 @@ const School = require('../models/school')
 const Parent = require('../models/parent')
 const Product = require('../models/product')
 const Assignment = require('../models/assignment')
+const Feeds = require('../models/feeds')
 const Router = express.Router();
 
 const upload = multer({
@@ -156,6 +157,35 @@ Router.post(
       const file = new Assignment({
         Subjects,  
         Standard,  
+        file_path: path,
+        file_mimetype: mimetype
+      });
+      await file.save();
+      res.send('file uploaded successfully.');
+    } catch (error) {
+      res.status(400).send('Error while uploading file. Try again later.');
+    }
+  },
+  (error, req, res, next) => {
+    if (error) {
+      res.status(500).send(error.message);
+    }
+  }
+);
+
+
+Router.post(
+  '/feeds',
+  uploads.single('file'),
+  async (req, res) => {
+    try {
+      const {Title,Caption,Privacy,Notify} = req.body;
+      const { path, mimetype } = req.file;
+      const file = new Feeds({
+        Title,  
+        Caption,  
+        Privacy,
+        Notify,
         file_path: path,
         file_mimetype: mimetype
       });

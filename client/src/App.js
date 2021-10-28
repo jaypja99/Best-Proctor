@@ -16,8 +16,9 @@ import SellerRegister from './pages/SellerRegister';
 import Sellerdash from "./pages/Sellerdash";
 import SellerdashProduct from "./pages/SellerdashProduct";
 import SellerdashOrder from "./pages/SellerdashOrder";
-
+import TeacherdashFeeds from "./pages/TeacherdashFeeds"
 import SchoolReq from './pages/SchoolReq'
+import Teacher_addFeeds from "./components/Teacher_addFeeds";
 
 function App() {
   return (  
@@ -38,6 +39,7 @@ function App() {
           <Route path='/parentdashboard' exact render={props => <ParentDash {...props} />} />
           <Route path='/teacherDashboard' exact render={props => <TeacherDash {...props} />} />
           <Route path='/teacherDashboard/addAss' exact render={props => <TeacherDashAss {...props} />} />
+          <Route path='/teacherDashboard/addFeed' exact render={props => <TeacherdashFeeds {...props} />} />
          
           <Route path='/sellerdashboard/product' exact render={props => <SellerdashProduct {...props} />} />
           <Route path='/sellerdashboard/order' exact render={props => <SellerdashOrder {...props} />} />

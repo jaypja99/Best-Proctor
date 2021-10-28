@@ -129,13 +129,13 @@ const SchoolRegister = () => {
               <div class="fielddiv">
                 
                 <div class="privatediv">
-                  <label class="container">Private
+                  <label class="container1">Private
                     <input type="radio"  name="schoolType" required  id="Private" value="Private"  onChange={handleInputChange} />
                     <span class="checkmark"></span>
                   </label>
                 </div>
                 <div class="govermentdiv">
-                  <label class="container">Goverment
+                  <label class="container1">Goverment
                     <input type="radio" name="schoolType" required  id="Goverment" value="Goverment"    onChange={handleInputChange}   />
                     <span class="checkmark"></span>
                   </label>
