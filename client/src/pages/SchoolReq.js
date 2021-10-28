@@ -39,6 +39,7 @@ const Sellerdash = () => {
                         <th>City</th>
                         <th>State</th>
                         <th>Admin Name</th>
+                        
                       </tr>
                     </thead>
                     <tbody>
