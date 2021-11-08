@@ -146,7 +146,7 @@ const Teacher_addAssignment = () => {
 
                 <div class="regbtndiv">
                     <button type="submit" class="registerbtn">
-                        Upload
+                        Upload Assignment
                     </button>
                 </div>
             </Form>

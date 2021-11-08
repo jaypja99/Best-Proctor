@@ -64,7 +64,10 @@
     display: flex;
     width: 100%;
     margin: 5px;
+<<<<<<< HEAD
     height: 100%;
+=======
+>>>>>>> 680a9dbe1e1dbd4961a5de1947d968b485ff8319
     height: 150px;
     background-color: white;
     border-radius: 10px;
@@ -91,6 +94,8 @@
 }
 
 .preview-image{
+    width: 500px;
+    
     float: center;
     flex-direction:column;
     margin: 10px;

@@ -189,7 +189,7 @@ input {
     padding-bottom: 10px;
 }
 
-.container {
+.container1 {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -199,7 +199,7 @@ input {
     font-size: 16px;
 }
 
-.container input {
+.container1 input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -217,13 +217,13 @@ input {
 
 /* On mouse-over, add a grey background color */
 
-.container:hover input~.checkmark {
+.container1:hover input~.checkmark {
     background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
 
-.container input:checked~.checkmark {
+.container1 input:checked~.checkmark {
     background-color: #d0e9da;
  
     border: 1px solid rgb(56, 143, 92);
@@ -239,13 +239,13 @@ input {
 
 /* Show the indicator (dot/circle) when checked */
 
-.container input:checked~.checkmark:after {
+.container1 input:checked~.checkmark:after {
     display: block;
 }
 
 /* Style the indicator (dot/circle) */
 
-.container .checkmark:after {
+.container1 .checkmark:after {
     top: 4.5px;
     left: 4.5px;
     width: 14px;
