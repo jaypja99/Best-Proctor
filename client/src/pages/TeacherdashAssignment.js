@@ -7,9 +7,8 @@ const TeacherdashAssignment = () => {
   return (
     <div className="Sellerdash">
       <div className='rowC'>
-        <Dashnav 
-    
-        />
+      <Dashnav 
+        f4="abc"/>
         <div className='sideright'>
           <Dashtop />
           <div className='dash'>

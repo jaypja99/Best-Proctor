@@ -41,7 +41,7 @@ const Dashnav = (props1) => {
                                 <span class="tooltip">School Request    </span>
                             </li>
                             <li>
-                                <NavLink to="/sellerdashboard/product" className={props1.f3}>
+                                <NavLink to="/adminDash" className={props1.f3}>
                                     <i class="fas fa-shopping-bag"></i>
                                     <span class="links_name">Products</span>
                                 </NavLink>
