@@ -6,6 +6,7 @@ const router = express.Router()
 const projectTemplateCopy = require('../models/project');
 const Achivement = require('../models/file_achive');
 const School = require('../models/school');
+const Product = require('../models/product');
 
 
 const app = express();
@@ -46,6 +47,13 @@ router.get("/api", (req, res) => {
 
   router.get("/school", (req, res) => {
     School.find({}).then((data) => {
+      
+      res.json(data);
+    });
+  });
+
+  router.get("/product", (req, res) => {
+    Product.find({}).then((data) => {
       
       res.json(data);
     });

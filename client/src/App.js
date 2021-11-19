@@ -16,8 +16,9 @@ import SellerRegister from './pages/SellerRegister';
 import Sellerdash from "./pages/Sellerdash";
 import SellerdashProduct from "./pages/SellerdashProduct";
 import SellerdashOrder from "./pages/SellerdashOrder";
-import TeacherdashFeeds from "./pages/TeacherdashFeeds"
-import SchoolReq from './pages/SchoolReq'
+import TeacherdashFeeds from "./pages/TeacherdashFeeds";
+import SchoolReq from './pages/SchoolReq';
+import ProductReq from './pages/ProductReq';
 import Teacher_addFeeds from "./components/Teacher_addFeeds";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           <Route path='/sellerdashboard/order' exact render={props => <SellerdashOrder {...props} />} />
 
           <Route path='/admin/schoolReq' exact render={props => <SchoolReq {...props} />} />
+          <Route path='/admin/productReq' exact render={props => <ProductReq {...props} />} />
 
         </Switch>
       </BrowserRouter>
