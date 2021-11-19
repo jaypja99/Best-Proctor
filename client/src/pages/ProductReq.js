@@ -7,6 +7,7 @@ const Sellerdash = () => {
 
   const getProductData = async () => {
     try {
+
       const res = await fetch("http://localhost:5000/app/product");
       const ActualData = await res.json();
       console.log(ActualData);
@@ -19,44 +20,53 @@ const Sellerdash = () => {
   useEffect(() => {
     getProductData();
   }, []);
-  return (
-    <div className="Sellerdash">
-      <div className='rowC'>
-        <Dashnav
-          f2="abc" />
-        <div className='sideright'>
-          <Dashtop />
-          <div className='dash'>
-            <div className='dashtop3'>
-              <div className='fullback1'>
+
+  return  (
+      <div className="Sellerdash">
+        <div className='rowC'>
+          <Dashnav
+            f2="abc" />
+          <div className='sideright'>
+            <Dashtop />
+            <div className='dash'>
+              <div className='dashtop3'>
+                <div className='fullback1'>
                   <div className='prodiv1'>
-    
-                      {data.map((curElem1, ind) => {
+
+                  {data.map((curElem1, ind) => {
                         return (
-                          <div className='prodiv' >
-                         <td>
-                           <tr></tr>
-                           <tr>Name: {curElem1.productname}</tr>
+                    <div className='prodiv' >
+                      <td>
+                        <tr>
+
+                          <img className="imagepro"
+                            src={curElem1.file_path.slice(13)}
+                          />
                           
-                          <tr>
+                        </tr>
+                        <div className="namepro">
+                        <tr>Name: {curElem1.productname}</tr>
+
+                        <tr>
                           Price: {curElem1.productprice} ₹
-                          </tr>
-                          </td>
-                          </div>
-                        );
-                      })}
-                   
+                        </tr>
+                        </div>
+                      </td>
+                    </div>
+                     );
+                    })}
+
                   </div>
-       
+
+                </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
-
-    </div>
-
-  );
+     
+    );
 };
 
 export default Sellerdash;

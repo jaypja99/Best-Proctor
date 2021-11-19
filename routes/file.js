@@ -240,6 +240,7 @@ Router.post(
   async (req, res) => {
     try {
       const {productname,schoolname,Standard,productcat,productsubcat,productquantity,productprice} = req.body;
+      const { path, mimetype } = req.file;
       const file = new Product({
         productname,
         schoolname,
@@ -247,7 +248,9 @@ Router.post(
         productcat,
         productsubcat,
         productquantity,
-        productprice
+        productprice,
+        file_path: path,
+        file_mimetype: mimetype
        
       });
       await file.save();

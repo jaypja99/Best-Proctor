@@ -46,7 +46,7 @@ function App() {
           <Route path='/sellerdashboard/order' exact render={props => <SellerdashOrder {...props} />} />
 
           <Route path='/admin/schoolReq' exact render={props => <SchoolReq {...props} />} />
-          <Route path='/admin/productReq' exact render={props => <ProductReq {...props} />} />
+          <Route path='/productReq' exact render={props => <ProductReq {...props} />} />
 
         </Switch>
       </BrowserRouter>
