@@ -13,6 +13,29 @@
 
 }
 
+.prodiv{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    height: 180px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+    padding: 14px;
+  
+    margin: 10px;
+    border-radius:15px;
+    transition: all 0.5s ease;
+}
+
+.prodiv1{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+  
+   
+}
+
 .dashtop1{
     display: flex;
     flex-direction: row;
@@ -64,16 +87,25 @@
     display: flex;
     width: 100%;
     margin: 5px;
-<<<<<<< HEAD
-    height: 100%;
-=======
->>>>>>> 680a9dbe1e1dbd4961a5de1947d968b485ff8319
     height: 150px;
     background-color: white;
     border-radius: 10px;
     transition: all 0.5s ease;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
+
+.fullback1{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
 .fullback{
     display: flex;
     
@@ -94,7 +126,7 @@
 }
 
 .preview-image{
-    width: 500px;
+    width: 100%;
     
     float: center;
     flex-direction:column;
