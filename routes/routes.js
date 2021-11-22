@@ -7,6 +7,7 @@ const projectTemplateCopy = require('../models/project');
 const Achivement = require('../models/file_achive');
 const School = require('../models/school');
 const Product = require('../models/product');
+const Feed = require('../models/feeds');
 
 
 const app = express();
@@ -54,6 +55,14 @@ router.get("/api", (req, res) => {
 
   router.get("/product", (req, res) => {
     Product.find({}).then((data) => {
+      
+      res.json(data);
+    });
+  });
+
+  
+  router.get("/feed", (req, res) => {
+    Feed.find({}).then((data) => {
       
       res.json(data);
     });

@@ -19,6 +19,7 @@ import SellerdashOrder from "./pages/SellerdashOrder";
 import TeacherdashFeeds from "./pages/TeacherdashFeeds";
 import SchoolReq from './pages/SchoolReq';
 import ProductReq from './pages/ProductReq';
+import FeedReq from './pages/FeedReq';
 import Teacher_addFeeds from "./components/Teacher_addFeeds";
 
 function App() {
@@ -47,6 +48,8 @@ function App() {
 
           <Route path='/admin/schoolReq' exact render={props => <SchoolReq {...props} />} />
           <Route path='/productReq' exact render={props => <ProductReq {...props} />} />
+          <Route path='/feedReq' exact render={props => <FeedReq {...props} />} />
+          
 
         </Switch>
       </BrowserRouter>
