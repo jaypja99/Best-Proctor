@@ -204,6 +204,8 @@ Router.post(
 
 
 
+
+
 Router.post(
   '/School',
   uploads.single('file'),
@@ -293,6 +295,29 @@ Router.post(
   },
  
 );
+
+
+Router.get('/sellerLogin',  async (req, res) => {
+	return res.render('sellerLogin');
+});
+
+
+Router.post('/sellerLogin',  async (req, res) => {
+	//console.log(req.body);
+  try{
+    const email=req.body.email;
+    const password=req.body.password;
+
+    console.log(`${email},${password}`);
+  }catch(error){
+    res.status(400).send("invalid Email")
+  }
+  
+	
+})
+
+
+
 
 Router.get('/getAllFiles', async (req, res) => {
   try {

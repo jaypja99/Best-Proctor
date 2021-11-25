@@ -46,7 +46,6 @@ const Sellerdash = () => {
                         </tr>
                         <div className="namepro">
                         <tr>Title: {curElem1.Title}</tr>
-
                         <tr>
                           Caption: {curElem1.Caption} 
                         </tr>

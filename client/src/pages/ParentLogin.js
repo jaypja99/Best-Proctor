@@ -37,7 +37,7 @@ function Login({ history }) {
                   password1: '',
                   textChange: 'Submitted'
                 });
-                isAuth() && isAuth().role === 'Seller'
+                isAuth() && isAuth().role === 'Parent'
                   ? history.push('/admin')
                   : history.push('/private');
                 toast.success(`Hey ${res.data.user.name}, Welcome back!`);
