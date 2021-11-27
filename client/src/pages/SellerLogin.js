@@ -6,60 +6,69 @@ import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import { authenticate, isAuth } from '../helpers/auth';
 import { Link, Redirect } from 'react-router-dom';
-function Login({ history }) {
+import { API_URL } from '../utils/constants';
+
+const Login = ({ history }) => {
+ 
+ 
+const dotenv = require('dotenv')
+dotenv.config()
+
+  
+  const [formData, setFormData] = useState({
+    email: '',
+    password1: '',
+    textChange: 'Sign In'
+  });
+  const { email, password1, textChange } = formData;
+  const handleChange = text => e => {
+    setFormData({ ...formData, [text]: e.target.value });
+  };
+  
+
+  const handleSubmit = e => {
     
-    const [formData, setFormData] = useState({
-        email: '',
-        password1: '',
-        textChange: 'Sign In'
-      });
-    const { email, password1, textChange } = formData;
-    const handleChange = text => e => {
-        setFormData({ ...formData, [text]: e.target.value });
-      };
-    
-       
-    const handleSubmit = e => {
-        console.log(process.env.REACT_APP_API_URL);
-        e.preventDefault();
-        if (email && password1) {
-          setFormData({ ...formData, textChange: 'Submitting' });
-          axios
-            .post(`${process.env.REACT_APP_API_URL}/login`, {
-              email,
-              password: password1
-            })
-            .then(res => {
-              authenticate(res, () => {
-                setFormData({
-                  ...formData,
-                  email: '',
-                  password1: '',
-                  textChange: 'Submitted'
-                });
-                isAuth() && isAuth().role === 'Seller'
-                  ? history.push('/admin')
-                  : history.push('/private');
-                toast.success(`Hey ${res.data.user.name}, Welcome back!`);
-              });
-            })
-            .catch(err => {
-              setFormData({
-                ...formData,
-                email: '',
-                password1: '',
-                textChange: 'Sign In'
-              });
-              console.log(err.response);
-              toast.error(err.response.data.errors);
+    console.log(process.env.REACT_APP_API_URL);
+    e.preventDefault();
+    if (email && password1) {
+      setFormData({ ...formData, textChange: 'Submitting' });
+      axios
+        .post(`${process.env.REACT_APP_API_URL}/sellerLogin`, {
+          email,
+          password: password1
+        })
+        .then(res => {
+          authenticate(res, () => {
+            setFormData({
+              ...formData,
+              email: '',
+              password1: '',
+              textChange: 'Submitted'
             });
-        } else {
-          toast.error('Please fill all fields');
-        }
-      };
+            isAuth() && isAuth().role === 'admin'
+              ? history.push('/admin')
+              : history.push('/sellerDashboard');
+            toast.success(`Hey ${res.data.user.name}, Welcome back!`);
+          });
+        })
+        .catch(err => {
+          setFormData({
+            ...formData,
+            email: '',
+            password1: '',
+            textChange: 'Sign In'
+          });
+          console.log(err.response);
+        
+        });
+    } else {
+      toast.error('Please fill all fields');
+    }
+  };
     return (
             <div className="Login">
                 {isAuth() ? <Redirect to='/' /> : null}
+                <ToastContainer />
                 <div className="forml">
                 <div class="wrapper">
                     <div class="title-text">
