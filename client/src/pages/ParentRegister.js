@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import "../css/Register.css";
 import Top from "../components/Reg_Top"
 import Top_Category from "../components/Reg_Category"
@@ -8,6 +8,24 @@ import axios from 'axios';
 import { API_URL } from '../utils/constants';
 
 const ParentRegister = () => {
+
+  const [data, setData] = useState([]);
+
+  const getProductData = async () => {
+    try {
+
+      const res = await fetch("http://localhost:5000/app/school");
+      const ActualData = await res.json();
+      console.log(ActualData);
+      setData(ActualData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getProductData();
+  }, []);
 
   const [state, setState] = useState({
     studentName: '',
@@ -265,17 +283,24 @@ const ParentRegister = () => {
                 onChange={handleInputChange} />
             </div>
           </div>
+          
           <div>
-            <label >School Name<span class="required">*</span></label>
-
-            <input
-              type="text"
-              required
-              name="schoolName"
-              value={state.schoolName}
-              onChange={handleInputChange} />
+             <label >School Name<span class="required">*</span></label>
+            <input name="schoolName" id="schoolName" list="schoolNames" required value={state.schoolName} onChange={handleInputChange} />
+           
+            <datalist id="schoolNames">
+            {data.map((curElem, ind) => {
+                        return (
+            <option value={curElem.schoolName}>{curElem.schoolName}</option>
+            );
+          })}
+            </datalist>
+            
+          
           </div>
+           
         </div>
+        
 
         <h3>Primary Content</h3>
         <div class="grid-container">

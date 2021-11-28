@@ -32,6 +32,21 @@ router.post('/project_co', (request,response)=>{
     })
 })
 
+router.get('/seller', async (req, res) => {
+  try {
+    if (req.session.user) {
+      const user = req.session.user
+      return res.render('sellerDashboard', {user})
+    }
+  }
+  catch (error){
+    return res.render('sellerDashboard', {
+      error: error.message
+    })
+  }
+  return res.redirect('/')
+});
+
 router.get("/api", (req, res) => {
     projectTemplateCopy.find({}).then((data) => {
       
