@@ -8,7 +8,7 @@ const Achivement = require('../models/file_achive');
 const School = require('../models/school');
 const Product = require('../models/product');
 const Feed = require('../models/feeds');
-
+const User = require('../models/seller');
 
 const app = express();
 
@@ -131,6 +131,21 @@ router.get("/api", (req, res) => {
     }
   );
   
+  //Routes
+  router.post("/sellerLogin", (req, res)=> {
+  const { email, password} = req.body
+  User.findOne({ email: email}, (err, user) => {
+      if(user){
+          if(password === user.password ) {
+              res.send({message: "Login Successfull", user: user})
+          } else {
+              res.send({ message: "Password didn't match"})
+          }
+      } else {
+          res.send({message: "User not registered"})
+      }
+  })
+}) 
 
   router.get('/getAllFiles', async (req, res) => {
     try {

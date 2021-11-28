@@ -101,7 +101,7 @@ dotenv.config()
                                 </div>
                                 <div class="field btn">
                                     <div class="btn-layer"></div>
-                                <button  type='submit' ><span className='ml-3'>Sign In</span></button>
+                                    <input type="submit" value="Login" />
                                     
                                 </div>
                                 <div class="signup-link">

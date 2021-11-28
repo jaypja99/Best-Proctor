@@ -4,6 +4,12 @@ import { Link, NavLink } from "react-router-dom";
 import "./Dashtop.css";
 
 function Dashtop() {
+
+    function logout(){
+        localStorage.clear();
+        window.location.href = '/';
+    }
+
     return (
         <>
             <div class="dashtop">
@@ -24,12 +30,12 @@ function Dashtop() {
                 </div>
 
                 <div class="logout">
-                <NavLink to="/" style={{ textDecoration: 'none'}}>
-                    <button type="submit" class="logoutbtn">
+                
+                    <button type="submit" onClick={logout} class="logoutbtn">
                         <i class='bx bx-log-out'></i>
                         Logout
                     </button>
-                </NavLink>
+
                 </div>
             </div>
 
