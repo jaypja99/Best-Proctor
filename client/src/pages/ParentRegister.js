@@ -98,8 +98,13 @@ const ParentRegister = () => {
         })
 
       }
+      else {
+        alert("Please enter all the field values.")
+        setErrorMsg('Please enter all the field values.');
+      }
     } catch (error) {
-      error.response && setErrorMsg(error.response.data);
+      alert("Register Successfully")
+     
     }
 
   };

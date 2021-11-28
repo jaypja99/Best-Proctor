@@ -45,29 +45,21 @@ dotenv.config()
               password1: '',
               textChange: 'Submitted'
             });
-            isAuth() && isAuth().role === 'admin'
-              ? history.push('/admin')
+            alert(res.data.message)
+            isAuth() && isAuth().role === null
+              ? history.push('/sellerLogin')
               : history.push('/sellerDashboard');
             toast.success(`Hey ${res.data.user.name}, Welcome back!`);
           });
         })
-        .catch(err => {
-          setFormData({
-            ...formData,
-            email: '',
-            password1: '',
-            textChange: 'Sign In'
-          });
-          console.log(err.response);
-        
-        });
+       
     } else {
       toast.error('Please fill all fields');
     }
   };
     return (
             <div className="Login">
-                {isAuth() ? <Redirect to='/' /> : null}
+               
                 <ToastContainer />
                 <div className="forml">
                 <div class="wrapper">

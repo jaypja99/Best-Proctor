@@ -95,9 +95,14 @@ const SchoolRegister = () => {
           })
         
       } 
-    } catch (error) {
-      error.response && setErrorMsg(error.response.data);
+     else {
+      alert("Please enter all the field values.")
+      setErrorMsg('Please enter all the field values.');
     }
+  } catch (error) {
+    alert("Register Successfully")
+   
+  }
 
   };
 

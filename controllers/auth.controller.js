@@ -1,4 +1,5 @@
-const User = require('../models/seller');
+const Seller = require('../models/seller');
+
 const expressJwt = require('express-jwt');
 const _ = require('lodash');
 const { OAuth2Client } = require('google-auth-library');
@@ -117,7 +118,7 @@ exports.registerController = (req, res) => {
 
   exports.signinController = (req, res) => {
     const { email, password} = req.body
-    User.findOne({ email: email}, (err, user) => {
+    Seller.findOne({ email: email}, (err, user) => {
         if(user){
             if(password === user.password ) {
                 res.send({message: "Login Successfull", user: user})

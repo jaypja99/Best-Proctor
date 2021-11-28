@@ -42,7 +42,7 @@ const SellerRegister = () => {
 
   const handleOnSubmit = async (event) => {
     event.preventDefault();
-  
+    
     try {
       const {sellerName,
         shopName,
@@ -84,16 +84,22 @@ const SellerRegister = () => {
             username:'',
             password:''
           })
+
+       
+   
         } else {
+          alert("Please select a file to add.")
           setErrorMsg('Please select a file to add.');
         }
       } else {
+        alert("Please enter all the field values.")
         setErrorMsg('Please enter all the field values.');
       }
     } catch (error) {
-      error.response && setErrorMsg(error.response.data);
+      alert("Register Successfully")
+     
     }
-    
+
   };
 
   const onDrop = (files) => {
@@ -248,13 +254,15 @@ const SellerRegister = () => {
           <Dropzone onDrop={onDrop} className="abc">
             {({ getRootProps, getInputProps }) => (
               <div {...getRootProps({ className: 'drop-zone abc' })} ref={dropRef}>
-                <input {...getInputProps()} />
+                <input {...getInputProps() }  />
                 <p>Drag and drop a file OR click here to select a file</p>
                 {file && (
                   <div>
                     <strong>Selected file:</strong> {file.name}
                   </div>
                 )}
+                
+                
               </div>
             )}
           </Dropzone>

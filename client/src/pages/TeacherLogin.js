@@ -6,57 +6,57 @@ import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import { authenticate, isAuth } from '../helpers/auth';
 import { Link, Redirect } from 'react-router-dom';
-function Login({ history }) {
+
+import { API_URL } from '../utils/constants';
+const Login = ({ history }) => {
+ 
+ 
+  const dotenv = require('dotenv')
+  dotenv.config()
+  
     
     const [formData, setFormData] = useState({
-        email: '',
-        password1: '',
-        textChange: 'Sign In'
-      });
+      email: '',
+      password1: '',
+      textChange: 'Sign In'
+    });
     const { email, password1, textChange } = formData;
     const handleChange = text => e => {
-        setFormData({ ...formData, [text]: e.target.value });
-      };
+      setFormData({ ...formData, [text]: e.target.value });
+    };
     
-       
+  
     const handleSubmit = e => {
-        console.log(process.env.REACT_APP_API_URL);
-        e.preventDefault();
-        if (email && password1) {
-          setFormData({ ...formData, textChange: 'Submitting' });
-          axios
-            .post(`${process.env.REACT_APP_API_URL}/login`, {
-              email,
-              password: password1
-            })
-            .then(res => {
-              authenticate(res, () => {
-                setFormData({
-                  ...formData,
-                  email: '',
-                  password1: '',
-                  textChange: 'Submitted'
-                });
-                isAuth() && isAuth().role === 'Seller'
-                  ? history.push('/admin')
-                  : history.push('/private');
-                toast.success(`Hey ${res.data.user.name}, Welcome back!`);
-              });
-            })
-            .catch(err => {
+      
+      console.log(process.env.REACT_APP_API_URL);
+      e.preventDefault();
+      if (email && password1) {
+        setFormData({ ...formData, textChange: 'Submitting' });
+        axios
+          .post(`${process.env.REACT_APP_API_URL}/teacherLogin`, {
+            email,
+            password: password1
+          })
+          .then(res => {
+            authenticate(res, () => {
               setFormData({
                 ...formData,
                 email: '',
                 password1: '',
-                textChange: 'Sign In'
+                textChange: 'Submitted'
               });
-              console.log(err.response);
-              toast.error(err.response.data.errors);
+              alert(res.data.message)
+              isAuth() && isAuth().role === null
+                ? history.push('/teacherLogin')
+                : history.push('/teacherDashboard');
+            
             });
-        } else {
-          toast.error('Please fill all fields');
-        }
-      };
+          })
+         
+      } else {
+        toast.error('Please fill all fields');
+      }
+    };
     return (
             <div className="Login">
                 {isAuth() ? <Redirect to='/' /> : null}
@@ -76,14 +76,14 @@ function Login({ history }) {
                     </div>
                     <div class="form-container">
                         <div class="form-inner">
-                            <form saaction="#" class="login" onSubmit={handleSubmit}>
-                                <div class="field">
+                        <form action="/teacherLogin" class="login"   method="POST" onSubmit={handleSubmit}>
+                        <div class="field">
                                     <input type="email" placeholder="Email Address" required 
-                                    onChange={handleChange('email')}
+                                    onChange={handleChange('email')} name="email"
                                     value={email}/>
                                 </div>
                                 <div class="field">
-                                    <input type="password" placeholder="Password" required 
+                                    <input type="password" placeholder="Password" name="password" required 
                                     onChange={handleChange('password1')}
                                     value={password1}/>
                                 </div>
@@ -92,7 +92,7 @@ function Login({ history }) {
                                 </div>
                                 <div class="field btn">
                                     <div class="btn-layer"></div>
-                                    <NavLink to="teacherDashboard"><input type="submit" value="Login" /></NavLink>
+                                    <input type="submit" value="Login" />
                                     
                                 </div>
                                 <div class="signup-link">
