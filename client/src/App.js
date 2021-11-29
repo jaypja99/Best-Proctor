@@ -20,6 +20,7 @@ import TeacherdashFeeds from "./pages/TeacherdashFeeds";
 import SchoolReq from './pages/SchoolReq';
 import ProductReq from './pages/ProductReq';
 import FeedReq from './pages/FeedReq';
+import Materials from './pages/Download_Notes'
 import Teacher_addFeeds from "./components/Teacher_addFeeds";
 
 function App() {
@@ -40,6 +41,11 @@ function App() {
           <Route path='/sellerdashboard' exact render={props => <Sellerdash {...props} />} />
           <Route path='/parentdashboard' exact render={props => <ParentDash {...props} />} />
           <Route path='/teacherDashboard' exact render={props => <TeacherDash {...props} />} />
+
+          <Route path='/parentdashboard/productReq' exact render={props => <ProductReq {...props} />} />
+          <Route path='/parentdashboard/feedReq' exact render={props => <FeedReq {...props} />} />
+          <Route path='/parentdashboard/material' exact render={props => <Materials {...props} />} />
+          
           <Route path='/teacherDashboard/addAss' exact render={props => <TeacherDashAss {...props} />} />
           <Route path='/teacherDashboard/addFeed' exact render={props => <TeacherdashFeeds {...props} />} />
          
@@ -47,8 +53,7 @@ function App() {
           <Route path='/sellerdashboard/order' exact render={props => <SellerdashOrder {...props} />} />
 
           <Route path='/admin/schoolReq' exact render={props => <SchoolReq {...props} />} />
-          <Route path='/productReq' exact render={props => <ProductReq {...props} />} />
-          <Route path='/feedReq' exact render={props => <FeedReq {...props} />} />
+
           
 
         </Switch>
