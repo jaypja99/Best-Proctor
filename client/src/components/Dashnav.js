@@ -23,7 +23,6 @@ const Dashnav = (props1) => {
 
 
                 <div className="sidebar">
-
                     <ul className="nav-list">
                         <div className="nav_selection">
                             <li>

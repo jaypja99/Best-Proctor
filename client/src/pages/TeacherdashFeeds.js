@@ -9,7 +9,7 @@ const TeacherdashAssignment = () => {
     <div className="Sellerdash">
       <div className='rowC'>
         <Dashnav 
-    
+          f2="abc"
         />
         <div className='sideright'>
           <Dashtop />

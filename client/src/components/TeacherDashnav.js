@@ -27,7 +27,7 @@ const Dashnav = (props1) => {
                     <ul class="nav-list">
                         <div className="nav_selection">
                             <li>
-                                <NavLink to="/teacherDashboard" className={props1.f2}>
+                                <NavLink to="/teacherDashboard" className={props1.f1}>
                                     <i class="bx bx-grid-alt"></i>
                                     <span class="links_name">Home</span>
                                 </NavLink>
@@ -41,21 +41,21 @@ const Dashnav = (props1) => {
                                 <span class="tooltip">Post News Feeds</span>
                             </li>
                             <li>
-                                <NavLink to="/teacherDashboard" className={props1.f2}>
+                                <NavLink to="/teacherDashboard" className={props1.f3}>
                                     <i class="fas fas fa-user-lock"></i>
                                     <span class="links_name">Grant Access</span>
                                 </NavLink>
                                 <span class="tooltip">Grant Access</span>
                             </li>
                             <li>
-                                <NavLink to="/teacherDashboard/addAss" className={props1.f2}>
+                                <NavLink to="/teacherDashboard/addAss" className={props1.f4}>
                                     <i class="fas fa-heart"></i>
                                     <span class="links_name">Add Assignment</span>
                                 </NavLink>
                                 <span class="tooltip">Add Assignment</span>
                             </li>
                             <li>
-                                <NavLink to="/teacherDashboard" className={props1.f3}>
+                                <NavLink to="/teacherDashboard" className={props1.f5}>
                                     <i class="fas fa-user-clock" ></i>
                                     <span class="links_name">Fees Payment</span>
                                 </NavLink>

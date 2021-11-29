@@ -25,7 +25,7 @@ const Sellerdash = () => {
       <div className="Sellerdash">
         <div className='rowC'>
           <Dashnav
-            f2="abc" />
+            f3="abc" />
           <div className='sideright'>
             <Dashtop />
             <div className='dash'>
