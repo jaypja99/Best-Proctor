@@ -30,7 +30,7 @@ export const getCookie = key => {
 
 // Set in localstorage
 export const setLocalStorage = (key, value) => {
-    if (window !== 'undefined') {
+    if (JSON.stringify(value) !== 'undefined') {
         localStorage.setItem(key, JSON.stringify(value));
     }
 };
