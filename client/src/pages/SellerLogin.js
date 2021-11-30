@@ -51,11 +51,11 @@ const Login = ({ history }) => {
               : history.push('/sellerDashboard');
             toast.success(`Hey ${res.data.user.name}, Welcome back!`);
 
-            return res.data;
+           
           });
          
         }).catch((err)=>{
-          localStorage.setItem("user", JSON.stringify({user: {token: null}}));
+          localStorage.clear();
       });
 
     } else {

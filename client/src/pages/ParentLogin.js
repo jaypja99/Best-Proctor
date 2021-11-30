@@ -45,12 +45,14 @@ const Login = ({ history }) => {
                 textChange: 'Submitted'
               });
               alert(res.data.message)
-              isAuth() && isAuth().role === null
+              isAuth() && isAuth().role ==='undefined'
                 ? history.push('/')
                 : history.push('/parentDashboard');
               toast.success(`Hey ${res.data.user.name}, Welcome back!`);
             });
-          })
+          }).catch((err)=>{
+            localStorage.clear();
+        });
          
          
       } else {
@@ -59,7 +61,7 @@ const Login = ({ history }) => {
     };
     return (
             <div className="Login">
-                {isAuth() ? <Redirect to='/' /> : null}
+               
                 <div className="forml">
                 <div class="wrapper">
                     <div class="title-text">
