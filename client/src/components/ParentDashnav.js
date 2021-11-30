@@ -4,6 +4,8 @@ import { Link, NavLink } from "react-router-dom";
 import "./Dashnav.css";
 
 const Dashnav = (props1) => {
+    var result = localStorage.getItem("user");
+    var object = JSON.parse(result);
     return (
         <>
 
@@ -14,11 +16,12 @@ const Dashnav = (props1) => {
                         <div class="logo_name">BestProctor</div>
 
                     </div>
-                    <ul class="nav-list">
-                        <li>
-
-                        </li>
-                    </ul>
+                    <div class="name_account">
+                              
+                                <h6>Name: {object.parentName}</h6>
+                                <h6>Shcool name: {object.schoolName}</h6>
+                                
+                     </div>
                 </div>
 
 

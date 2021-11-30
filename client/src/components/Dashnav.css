@@ -8,16 +8,22 @@
   overflow: hidden; 
   z-index: 99;
   margin: 5px;
-  height: 17vh;
+  height: 20vh;
   border-radius:15px;
   transition: all 0.5s ease;
+  
+}
+
+.name_account{
+  color: white;
+  margin-left: 10px;
   
 }
 
 .sidebar{
     
     width: 220px;
-    height: 80vh; 
+    height: 77vh; 
     background: -webkit-linear-gradient(top right, #0a385a, #011036);
     overflow: hidden; 
     z-index: 99;

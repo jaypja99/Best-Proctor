@@ -5,7 +5,9 @@ import "./Dashnav.css";
 
 const SellerDashNav = (props1) => {
 
-    
+
+    var result = localStorage.getItem("user");
+    var object = JSON.parse(result);
 
     return (
         <>
@@ -17,12 +19,13 @@ const SellerDashNav = (props1) => {
                         <div class="logo_name">BestProctor</div>
 
                     </div>
-                    <ul class="nav-list">
-                        <li>
-
-
-                        </li>
-                    </ul>
+                    <div class="name_account">
+                              
+                                <h6>Name: {object.sellerName}</h6>
+                                <h6>Shop name: {object.shopName}</h6>
+                                
+                     </div>
+                  
                 </div>
 
 
@@ -41,7 +44,7 @@ const SellerDashNav = (props1) => {
                                 <NavLink to="/sellerdashboard/order" className={props1.f2}>
                                     <i class='bx bx-cart-alt'></i>
                                     <span class="links_name">Order</span>
-                               </NavLink>
+                                </NavLink>
                                 <span class="tooltip">Orders</span>
                             </li>
                             <li>
