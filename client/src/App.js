@@ -24,6 +24,7 @@ import Materials from './pages/Download_Notes'
 import Teacher_addFeeds from "./components/Teacher_addFeeds";
 
 function App() {
+  
   return (  
     <div className="App">
      <BrowserRouter>
@@ -53,6 +54,8 @@ function App() {
           <Route path='/sellerdashboard/order' exact render={props => <SellerdashOrder {...props} />} />
 
           <Route path='/admin/schoolReq' exact render={props => <SchoolReq {...props} />} />
+          <Route path='/productReq' exact render={props => <ProductReq {...props} />} />
+          <Route path='/NewsFeed' exact render={props => <FeedReq {...props} />} />
 
           
 

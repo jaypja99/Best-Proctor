@@ -30,6 +30,7 @@ router.post('/register',
 router.post("/sellerLogin", (req, res)=> {
     const { email, password} = req.body
     Seller.findOne({ email: email}, (err, user) => {
+        signinController
         if(user){
             if(password === user.password ) {
                 res.send({message: "Login Successfull", user: user})
@@ -43,6 +44,7 @@ router.post("/sellerLogin", (req, res)=> {
 }) 
 
 router.post("/teacherLogin", (req, res)=> {
+    signinController
     const { email, password} = req.body
     Teacher.findOne({ email: email}, (err, user) => {
         if(user){
@@ -58,6 +60,7 @@ router.post("/teacherLogin", (req, res)=> {
 }) 
 
 router.post("/parentLogin", (req, res)=> {
+    signinController
     const { email, password} = req.body
     Parent.findOne({ email: email}, (err, user) => {
         if(user){

@@ -10,6 +10,7 @@ const jwt = require('jsonwebtoken');
 const expressJWT = require('express-jwt');
 const { errorHandler } = require('../helpers/dbErrorHandling');
 const sgMail = require('@sendgrid/mail');
+
 sgMail.setApiKey(process.env.MAIL_KEY);
 
 exports.registerController = (req, res) => {
@@ -117,15 +118,22 @@ exports.registerController = (req, res) => {
   };
 
   exports.signinController = (req, res) => {
+    const { updateUser, isAuth, getCookie, signout,removeLocalStorage,removeCookie }  = require('../client/src/helpers/auth');
     const { email, password} = req.body
     Seller.findOne({ email: email}, (err, user) => {
         if(user){
             if(password === user.password ) {
                 res.send({message: "Login Successfull", user: user})
             } else {
+              signout(() => {
+                history.push('/');
+              });
                 res.send({ message: "Password didn't match"})
             }
         } else {
+          signout(() => {
+            history.push('/');
+          });
             res.send({message: "User not registered"})
         }
     })
