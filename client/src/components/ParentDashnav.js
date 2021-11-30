@@ -34,7 +34,7 @@ const Dashnav = (props1) => {
                                 <span class="tooltip">Home</span>
                             </li>
                             <li>
-                                <NavLink to="/feedReq" className={props1.f2}>
+                                <NavLink to="/Newsfeed" className={props1.f2}>
                                     <i class="fas fa-newspaper"></i>
                                     <span class="links_name">News Feeds</span>
                                 </NavLink>

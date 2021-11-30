@@ -23,6 +23,7 @@ import FeedReq from './pages/FeedReq';
 import Teacher_addFeeds from "./components/Teacher_addFeeds";
 
 function App() {
+  
   return (  
     <div className="App">
      <BrowserRouter>
@@ -48,7 +49,7 @@ function App() {
 
           <Route path='/admin/schoolReq' exact render={props => <SchoolReq {...props} />} />
           <Route path='/productReq' exact render={props => <ProductReq {...props} />} />
-          <Route path='/feedReq' exact render={props => <FeedReq {...props} />} />
+          <Route path='/NewsFeed' exact render={props => <FeedReq {...props} />} />
           
 
         </Switch>

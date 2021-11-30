@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
-import { authenticate, isAuth } from '../helpers/auth';
+import { updateUser, isAuth, getCookie, signout,authenticate } from '../helpers/auth';
 import { Link, Redirect } from 'react-router-dom';
 
 const Login = ({ history }) => {
@@ -46,11 +46,12 @@ const Login = ({ history }) => {
               });
               alert(res.data.message)
               isAuth() && isAuth().role === null
-                ? history.push('/parentLogin')
+                ? history.push('/')
                 : history.push('/parentDashboard');
               toast.success(`Hey ${res.data.user.name}, Welcome back!`);
             });
           })
+         
          
       } else {
         toast.error('Please fill all fields');
