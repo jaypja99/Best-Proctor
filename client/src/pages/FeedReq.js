@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import "../css/Sellerdash.css";
 import Dashnav from "../components/ParentDashnav";
 import Dashtop from "../components/Dashtop";
+import '../components/Cards.css';
+import CardItem from '../components/CardIteam';
+
 const Sellerdash = () => {
   const [data, setData] = useState([]);
 
@@ -29,6 +32,8 @@ const Sellerdash = () => {
           <div className='sideright'>
             <Dashtop />
             <div className='dash'>
+
+           
               <div className='dashtop3'>
                 <div className='fullback1'>
                   <div className='prodiv1'>
