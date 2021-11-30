@@ -19,10 +19,10 @@
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
-    width: 350px;
-    height: 390px;
+    width: 330px;
+    height: 400px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    margin: 30px;
+    margin: 18px;
     padding: 5px;
     border-radius:15px;
     transition: all 0.5s ease;
