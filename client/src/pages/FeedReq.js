@@ -3,7 +3,7 @@ import "../css/Sellerdash.css";
 import Dashnav from "../components/ParentDashnav";
 import Dashtop from "../components/Dashtop";
 import '../components/Cards.css';
-import CardItem from '../components/CardIteam';
+
 
 const Sellerdash = () => {
   const [data, setData] = useState([]);
@@ -50,9 +50,11 @@ const Sellerdash = () => {
                           
                         </tr>
                         <div className="namepro">
-                        <tr>Title: {curElem1.Title}</tr>
+                        <tr><b>Title:</b>  &nbsp;{curElem1.Title}</tr>
                         <tr>
-                          Caption: {curElem1.Caption} 
+                          <b>
+                          Caption:
+                          </b> &nbsp; {curElem1.Caption} 
                         </tr>
                         </div>
                       </td>
