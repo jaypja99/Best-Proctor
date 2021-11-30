@@ -37,7 +37,7 @@ const upload = multer({
 const uploads = multer({
   storage: multer.diskStorage({
     destination(req, file, cb) {
-      cb(null, './client/public/images');
+      cb(null, './files');
     },
     filename(req, file, cb) {
       cb(null, `${new Date().getTime()}_${file.originalname}`);
@@ -152,11 +152,12 @@ Router.post(
   uploads.single('file'),
   async (req, res) => {
     try {
-      const {Standard,Subjects} = req.body;
+      const {Standard,Subjects,description} = req.body;
       const { path, mimetype } = req.file;
       const file = new Assignment({
         Subjects,  
-        Standard,  
+        Standard, 
+        description, 
         file_path: path,
         file_mimetype: mimetype
       });

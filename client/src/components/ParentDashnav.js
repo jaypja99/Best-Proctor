@@ -34,21 +34,21 @@ const Dashnav = (props1) => {
                                 <span class="tooltip">Home</span>
                             </li>
                             <li>
-                                <NavLink to="/Newsfeed" className={props1.f2}>
+                                <NavLink to="/parentdashboard/feedReq" className={props1.f2}>
                                     <i class="fas fa-newspaper"></i>
                                     <span class="links_name">News Feeds</span>
                                 </NavLink>
                                 <span class="tooltip">News Feeds</span>
                             </li>
                             <li>
-                                <NavLink to="/productReq" className={props1.f3}>
+                                <NavLink to="/parentdashboard/productReq" className={props1.f3}>
                                     <i class="fas fa-shopping-bag"></i>
                                     <span class="links_name">Shopping</span>
                                 </NavLink>
                                 <span class="tooltip">Shopping</span>
                             </li>
                             <li>
-                                <NavLink to="/parentdashboard" className={props1.f4}>
+                                <NavLink to="/parentdashboard/material" className={props1.f4}>
                                     <i class="fas fa-heart"></i>
                                     <span class="links_name">Assignment</span>
                                 </NavLink>

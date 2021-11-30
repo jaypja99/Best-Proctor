@@ -11,7 +11,8 @@ const Teacher_addAssignment = () => {
     const [file, setFile] = useState(null); // state for storing actual image
     const [state, setState] = useState({
         Standard: '',
-        Subjects: ''
+        Subjects: '',
+        description: ''
     });
     const [errorMsg, setErrorMsg] = useState('');
 
@@ -31,7 +32,8 @@ const Teacher_addAssignment = () => {
         try {
             const {
                 Standard,
-                Subjects
+                Subjects,
+                description
                  } = state;
             if (Subjects.trim() !== '' && Standard.trim()) {
                 if (file) {
@@ -39,7 +41,7 @@ const Teacher_addAssignment = () => {
                     formData.append('file', file);
                     formData.append('Standard', Standard);
                     formData.append('Subjects', Subjects);
-
+                    formData.append('description',description);
 
 
                     setErrorMsg('');
@@ -51,7 +53,8 @@ const Teacher_addAssignment = () => {
                     });
                     this.setState({
                         Standard: '',
-                        Subjects: ''
+                        Subjects: '',
+                        description: ''
                     })
 
                 }
@@ -124,6 +127,16 @@ const Teacher_addAssignment = () => {
                             <option value="Social Science">Social Science</option>
                         </datalist>
                     </div>
+
+                    <div>
+            <label >Description<span class="required">*</span></label>
+            <input 
+                type="text" 
+                required 
+                name="description"
+                value={state.description}
+                onChange={handleInputChange} />
+          </div>
 
                 </div>
 

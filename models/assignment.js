@@ -12,6 +12,11 @@ const assignmentSchema = mongoose.Schema(
       required: true,
       trim: true
     },
+    description:{
+      type: String,
+      required: true,
+      trim: true
+    },
     file_path: {
       type: String,
       required: true
@@ -28,4 +33,4 @@ const assignmentSchema = mongoose.Schema(
 
 
 
-module.exports = mongoose.model('assignment', assignmentSchema);
+module.exports = mongoose.model('files', assignmentSchema);
