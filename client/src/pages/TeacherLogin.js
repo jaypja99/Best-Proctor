@@ -46,12 +46,14 @@ const Login = ({ history }) => {
                 textChange: 'Submitted'
               });
               alert(res.data.message)
-              isAuth() && isAuth().role === null
-                ? history.push('/teacherLogin')
+              isAuth() && isAuth().role === 'undefined'
+                ? history.push('/')
                 : history.push('/teacherDashboard');
             
             });
-          })
+          }).catch((err)=>{
+            localStorage.clear();
+        });
          
       } else {
         toast.error('Please fill all fields');
@@ -59,7 +61,7 @@ const Login = ({ history }) => {
     };
     return (
             <div className="Login">
-                {isAuth() ? <Redirect to='/' /> : null}
+           
                 <div className="forml">
                 <div class="wrapper">
                     <div class="title-text">

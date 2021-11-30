@@ -30,7 +30,7 @@ router.post('/register',
 router.post("/sellerLogin", (req, res)=> {
     const { email, password} = req.body
     Seller.findOne({ email: email}, (err, user) => {
-        signinController
+        
         if(user){
             if(password === user.password ) {
                 res.send({message: "Login Successfull", user: user})
