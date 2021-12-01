@@ -19,7 +19,7 @@ const Dashnav = (props1) => {
                     <div class="name_account">
                               
                                 <h6>Name: {object.parentName}</h6>
-                                <h6>Shcool name: {object.schoolName}</h6>
+                                <h6>Shcool: {object.schoolName}</h6>
                                 
                      </div>
                 </div>

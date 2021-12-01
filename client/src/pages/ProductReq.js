@@ -35,7 +35,7 @@ const Sellerdash = () => {
 
                   {data.map((curElem1, ind) => {
                         return (
-                    <div className='prodiv' >
+                    <div className='pro' >
                       <td>
                         <tr>
 
