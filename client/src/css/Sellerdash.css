@@ -12,6 +12,11 @@
     justify-content: space-between;
 
 }
+
+.std{
+    margin: 10px;
+    width: 300px;
+}
 .namepro{
     justify-content: justify;
 }

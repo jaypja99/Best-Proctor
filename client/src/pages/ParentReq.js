@@ -29,7 +29,7 @@ const Sellerdash = () => {
         <div className='sideright'>
           <Dashtop />
           <div className='dash'>
-          <div>
+          <div className='std'> 
                         <label >Standard<span class="required">*</span></label>
                         <input name="Standard" id="Standard" list="standards"
                             required value={state.Standard} 
