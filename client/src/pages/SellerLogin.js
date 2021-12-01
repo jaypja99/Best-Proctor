@@ -49,7 +49,7 @@ const Login = ({ history }) => {
             isAuth() && isAuth().role === 'undefined'
               ? history.push('/')
               : history.push('/sellerDashboard');
-            toast.success(`Hey ${res.data.user.name}, Welcome back!`);
+            
 
            
           });
