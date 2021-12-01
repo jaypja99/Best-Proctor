@@ -26,6 +26,19 @@
     padding: 5px;
     border-radius:15px;
     transition: all 0.5s ease;
+}
+
+.pro{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    width: 330px;
+    height: 300px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    margin: 18px;
+    padding: 5px;
+    border-radius:15px;
+    transition: all 0.5s ease;
     
 }
 
