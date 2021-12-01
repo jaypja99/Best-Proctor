@@ -3,6 +3,7 @@ import "../css/Sellerdash.css";
 import Dashnav from "../components/ParentDashnav";
 import Dashtop from "../components/Dashtop";
 import Teacher_addAssignment from "../components/Material";
+import Subjects from "../components/Subjects";
 const TeacherdashAssignment = () => {
   return (
     <div className="Sellerdash">
@@ -12,6 +13,7 @@ const TeacherdashAssignment = () => {
         <div className='sideright'>
           <Dashtop />
           <div className='dash'>
+            <Subjects/>
             <Teacher_addAssignment/>
             </div>
           </div>

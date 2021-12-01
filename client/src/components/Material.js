@@ -3,12 +3,7 @@ import download from 'downloadjs';
 import axios from 'axios';
 import { API_URL } from '../utils/constants';
 import './FileList.css'
-import Maths from '../images/Maths.png'
-import Computer from '../images/Computer.png'
-import SS from '../images/SS.png'
-import S from '../images/Science.png'
-import Hindi from '../images/Hindi.png'
-import English from '../images/English.png'
+
 
 
 const FilesList = ({match}) => {
@@ -48,33 +43,6 @@ const FilesList = ({match}) => {
   return (
     <div className="files-container ">
       
-      <div className="menuback">
-        
-      </div>
-      <div className="catmaterial">
-        <div className="cat">
-            <div className="catlayout">
-              <center><img className="image" src={Maths}/></center>
-            </div>
-            <div className="catlayout">
-            <center><img className="image" src={SS}/></center>
-            </div>
-            <div className="catlayout">
-            <center><img className="image" src={S}/></center>
-            </div>
-            <div className="catlayout">
-            <center><img className="image" src={Computer}/></center>
-            </div>
-            <div className="catlayout">
-            <center><img className="image" src={Hindi}/></center>
-            </div>
-            <div className="catlayout">
-            <center><img className="image" src={English}/></center>
-            </div>
-      
-        </div>
-      </div>
-
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
       <div className="background">
       <table className="files-table" >
