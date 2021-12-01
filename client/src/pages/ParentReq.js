@@ -20,7 +20,7 @@ const Sellerdash = () => {
       const res = await fetch("http://localhost:5000/app/parent");
       const ActualData = await res.json();
       console.log(ActualData);
-      setData(ActualData.filter((x) => x.Standard=== "Second"));
+      setData(ActualData.filter((x) => x.Standard=== "First"));
     } catch (error) {
       console.log(error);
     }
