@@ -4,7 +4,9 @@ import Dashnav from "../components/TeacherDashnav";
 import Dashtop from "../components/Dashtop";
 const Sellerdash = () => {
   const [data, setData] = useState([]);
-
+  const [state, setState] = useState({
+    Standard: ''
+});
   const getCovidData = async () => {
     try {
       const res = await fetch("http://localhost:5000/app/parent");
