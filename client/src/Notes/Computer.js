@@ -4,8 +4,6 @@ import axios from 'axios';
 import { API_URL } from '../utils/constants';
 import './FileList.css'
 
-
-
 const FilesList = ({match}) => {
   const [filesList, setFilesList] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
@@ -15,7 +13,7 @@ const FilesList = ({match}) => {
       try {
         const { data } = await axios.get(`${API_URL}/getAllFiles`);
         setErrorMsg('');
-        setFilesList(data);
+        setFilesList(data.filter((x) => x.Subjects === "Science"));
       } catch (error) {
         error.response && setErrorMsg(error.response.data);
       }

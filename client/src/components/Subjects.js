@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from "react-router-dom";
 import Maths from '../images/Maths.png'
 import Computer from '../images/Computer.png'
 import SS from '../images/SS.png'
@@ -15,23 +15,38 @@ function Subjects(props) {
             </div>
             <div className="catmaterial">
                 <div className="cat">
-                    <div className="catlayout cba">
-                        <center><img className="image" src={Maths} /></center>
+                    
+                    <div className={`catlayout ${ props.f1 }`}>
+                    <NavLink to="/parentdashboard/material">
+                        <center>
+                       
+                            <img className="image" src={Maths} /></center>
+                            </NavLink>
                     </div>
-                    <div className="catlayout">
+                    <div className={`catlayout ${ props.f2 }`}>
+                    <NavLink to="/parentdashboard/material_ss">
                         <center><img className="image" src={SS} /></center>
+                        </NavLink>
                     </div>
-                    <div className="catlayout">
+                    <div className={`catlayout ${ props.f3 }`}>
+                    <NavLink to="/parentdashboard/material_science">
                         <center><img className="image" src={S} /></center>
+                        </NavLink>
                     </div>
-                    <div className="catlayout">
+                    <div className={`catlayout ${ props.f4 }`}>
+                    <NavLink to="/parentdashboard/material_computer">
                         <center><img className="image" src={Computer} /></center>
+                        </NavLink>
                     </div>
-                    <div className="catlayout">
+                    <div className={`catlayout ${ props.f5 }`}>
+                    <NavLink to="/parentdashboard/material_hindi">
                         <center><img className="image" src={Hindi} /></center>
+                        </NavLink>
                     </div>
-                    <div className="catlayout">
+                    <div className={`catlayout ${ props.f6 }`}>
+                    <NavLink to="/parentdashboard/material_english">
                         <center><img className="image" src={English} /></center>
+                        </NavLink>
                     </div>
 
                 </div>
