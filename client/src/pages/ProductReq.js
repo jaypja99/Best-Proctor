@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../css/Sellerdash.css";
 import Dashnav from "../components/ParentDashnav";
 import Dashtop from "../components/Dashtop";
+import Subjects from "../components/Shop_category";
 const Sellerdash = () => {
   const [data, setData] = useState([]);
 
@@ -28,11 +29,12 @@ const Sellerdash = () => {
             f3="abc" />
           <div className='sideright'>
             <Dashtop />
+            <Subjects/>
             <div className='dash'>
               <div className='dashtop3'>
                 <div className='fullback1'>
                   <div className='prodiv1'>
-
+                    
                   {data.map((curElem1, ind) => {
                         return (
                     <div className='pro' >
