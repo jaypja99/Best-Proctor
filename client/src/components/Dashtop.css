@@ -1,6 +1,5 @@
 .dashtop {
     height: 60px;
-    
     background: white;
     display: flex;
     flex-direction: row;
@@ -9,7 +8,6 @@
     z-index: 99;
     margin: 5px;
     position: relative;
-
     border-radius: 10px;
     transition: all 0.5s ease;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
