@@ -127,9 +127,9 @@
 
 .fullback{
     display: flex;
-    
+
     margin: 5px;
-    height: 85vh;
+    height: 73vh;
     background-color: white;
     border-radius: 10px;
     transition: all 0.5s ease;
@@ -143,6 +143,7 @@
     height: 67vh;
     justify-content: space-evenly;
 }
+
 
 .preview-image{
     width: 100%;

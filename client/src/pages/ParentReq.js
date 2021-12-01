@@ -2,13 +2,21 @@ import React, { useEffect, useState } from "react";
 import "../css/Sellerdash.css";
 import Dashnav from "../components/TeacherDashnav";
 import Dashtop from "../components/Dashtop";
+
 const Sellerdash = () => {
   const [data, setData] = useState([]);
   const [state, setState] = useState({
     Standard: ''
 });
+
+
+
+
   const getCovidData = async () => {
+
     try {
+      var listObj = document.getElementById("Standard");
+      var datalist = document.getElementById(listObj.getAttribute("standards"));
       const res = await fetch("http://localhost:5000/app/parent");
       const ActualData = await res.json();
       console.log(ActualData);
@@ -22,6 +30,7 @@ const Sellerdash = () => {
     getCovidData();
   }, []);
   return (
+    
     <div className="Sellerdash">
       <div className='rowC'>
         <Dashnav
@@ -31,7 +40,7 @@ const Sellerdash = () => {
           <div className='dash'>
           <div className='std'> 
                         <label >Standard<span class="required">*</span></label>
-                        <input name="Standard" id="Standard" list="standards"
+                        <input name="Standard" id="Standard" list="standards"  
                             required value={state.Standard} 
                         />
                         <datalist id="standards">
@@ -49,6 +58,8 @@ const Sellerdash = () => {
                             <option value="Twelfth">Twelfth</option>
                         </datalist>
                     </div>
+
+                    
             <div className='dashtop3'>
               <div className='fullback'>
                 <table className="box">
