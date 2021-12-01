@@ -13,7 +13,7 @@ const FilesList = ({match}) => {
       try {
         const { data } = await axios.get(`${API_URL}/getAllFiles`);
         setErrorMsg('');
-        setFilesList(data.filter((x) => x.Subjects === "Science"));
+        setFilesList(data.filter((x) => x.Subjects === "Social Science"));
       } catch (error) {
         error.response && setErrorMsg(error.response.data);
       }
