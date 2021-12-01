@@ -5,6 +5,8 @@ import Dashtop from "../components/Dashtop";
 import Teacher_addAssignment from "../Notes/Computer";
 import Subjects from "../components/Subjects";
 const TeacherdashAssignment = () => {
+  var result = localStorage.getItem("user");
+  var object = JSON.parse(result);
   return (
     <div className="Sellerdash">
       <div className='rowC'>
@@ -15,6 +17,7 @@ const TeacherdashAssignment = () => {
           <div className='dash'>
             <Subjects
             f4="cba"/>
+            <h6>Standrad: {object.Standard}</h6>
             <Teacher_addAssignment/>
             </div>
           </div>
