@@ -8,7 +8,7 @@
   overflow: hidden; 
   z-index: 99;
   margin: 5px;
-  height: 20vh;
+  height: 25vh;
   border-radius:15px;
   transition: all 0.5s ease;
   
@@ -23,7 +23,7 @@
 .sidebar{
     
     width: 220px;
-    height: 77vh; 
+    height: 73vh; 
     background: -webkit-linear-gradient(top right, #0a385a, #011036);
     overflow: hidden; 
     z-index: 99;
