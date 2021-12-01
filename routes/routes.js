@@ -70,6 +70,13 @@ router.get("/api", (req, res) => {
     });
   });
 
+  router.get("/parent", (req, res) => {
+    Parent.find({}).then((data) => {
+      
+      res.json(data);
+    });
+  });
+
   router.get("/product", (req, res) => {
     Product.find({}).then((data) => {
       

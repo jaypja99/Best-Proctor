@@ -69,6 +69,10 @@ const parentSchema = mongoose.Schema(
     role:{
         type: String,
         default:'Parent'
+    },
+    valid:{
+      type:Boolean,
+      default:false
     }
   },
   {

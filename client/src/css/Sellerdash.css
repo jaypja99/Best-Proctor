@@ -203,3 +203,16 @@
       position:sticky;
       border-color: black;
   }
+.btn_grant{
+    background-color:rgb(26, 124, 18);
+    padding: 6px;
+    border-radius: 6px;
+    color: #fff;
+}
+.btn_grant_no{
+    background-color:rgb(124, 18, 18);
+    padding: 6px;
+    border-radius: 6px;
+    margin-left: 5px;
+    color: #fff;
+}
