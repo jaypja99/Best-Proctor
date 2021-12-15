@@ -82,7 +82,7 @@ function Login({ history }) {
                                     value={password1}/>
                                 </div>
                                 <div class="pass-link">
-                                    <a href="#">Forgot password?</a> 
+                                    
                                     <NavLink activeClassName="active" to="/SchoolRegister">Forgot password?</NavLink>
                                 </div>
                                 <div class="field btn">
