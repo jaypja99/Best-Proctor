@@ -52,6 +52,11 @@ const Sellerdash = () => {
                         <tr>
                           Price: {curElem1.productprice} ₹
                         </tr>
+
+                        <tr>
+                        
+                          <button className="btn_grant"> More info</button>
+                        </tr>
                         </div>
                       </td>
                     </div>

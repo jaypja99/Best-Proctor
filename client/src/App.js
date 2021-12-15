@@ -28,7 +28,9 @@ import Computer from './pages/Computer'
 import Hindi from './pages/Hindi';
 import English from './pages/English'
 import ForgetPassword from './pages/ForgetPassword'
+import TeacherdashStudent from './pages/TeacherdashStudent'
 import Teacher_addFeeds from "./components/Teacher_addFeeds";
+import TeacheraddVideo from "./pages/TeacheraddVideo"
 
 function App() {
   
@@ -60,9 +62,10 @@ function App() {
           <Route path='/parentdashboard/material_english' exact render={props => <English {...props} />} />
           
           <Route path='/teacherDashboard/addAss' exact render={props => <TeacherDashAss {...props} />} />
+          <Route path='/teacherDashboard/addstudent' exact render={props => <TeacherdashStudent {...props} />} />
           <Route path='/teacherDashboard/addFeed' exact render={props => <TeacherdashFeeds {...props} />} />
           <Route path='/teacherDashboard/parentReq' exact render={props => <ParentReq {...props} />} />
-         
+          <Route path='/teacherDashboard/addVideo' exact render={props => <TeacheraddVideo {...props} />} />
           <Route path='/sellerdashboard/product' exact render={props => <SellerdashProduct {...props} />} />
           <Route path='/sellerdashboard/order' exact render={props => <SellerdashOrder {...props} />} />
 

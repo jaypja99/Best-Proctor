@@ -48,14 +48,28 @@ const Dashnav = (props1) => {
                                 <span class="tooltip">Grant Access</span>
                             </li>
                             <li>
-                                <NavLink to="/teacherDashboard/addAss" className={props1.f4}>
+                                <NavLink to="/teacherDashboard/addstudent" className={props1.f4}>
+                                    <i class="fas fas fa-user-lock"></i>
+                                    <span class="links_name">Add Student</span>
+                                </NavLink>
+                                <span class="tooltip">Add Student</span>
+                            </li>
+                            <li>
+                                <NavLink to="/teacherDashboard/addAss" className={props1.f5}>
                                     <i class="fas fa-heart"></i>
                                     <span class="links_name">Add Assignment</span>
                                 </NavLink>
                                 <span class="tooltip">Add Assignment</span>
                             </li>
                             <li>
-                                <NavLink to="/teacherDashboard/parentReq" className={props1.f5}>
+                                <NavLink to="/teacherDashboard/addVideo" className={props1.f6}>
+                                    <i class="fas fa-heart"></i>
+                                    <span class="links_name">Add Video Link</span>
+                                </NavLink>
+                                <span class="tooltip">Add Video Link</span>
+                            </li>
+                            <li>
+                                <NavLink to="/teacherDashboard/parentReq" className={props1.f7}>
                                     <i class="fas fa-user-clock" ></i>
                                     <span class="links_name">Fees Payment</span>
                                 </NavLink>
