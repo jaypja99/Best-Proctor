@@ -156,9 +156,12 @@ const Seller_addproduct = () => {
                                     required value={state.productcat} onChange={handleInputChange}
                                 />
                                 <datalist id="cates">
-                                    <option value="T-shirts">T-shirts</option>
-                                    <option value="Jackets">Jackets</option>
-                                    <option value="Accessories">Accessories</option>
+                                    <option value="T-shirts">Shoes</option>
+                                    <option value="Jackets">Bags</option>
+                                    <option value="Accessories">Stationery</option>
+                                    <option value="Accessories">Books</option>
+                                    <option value="Accessories">Dress</option>
+                                    <option value="Accessories">Sports</option>
                                 </datalist>
                             </div>
 
