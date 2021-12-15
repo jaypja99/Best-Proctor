@@ -8,6 +8,9 @@ import { authenticate, isAuth } from '../helpers/auth';
 import { Link, Redirect } from 'react-router-dom';
 function Login({ history }) {
     
+  const dotenv = require('dotenv')
+  dotenv.config()
+
     const [formData, setFormData] = useState({
         email: '',
         password1: '',
@@ -25,7 +28,7 @@ function Login({ history }) {
         if (email && password1) {
           setFormData({ ...formData, textChange: 'Submitting' });
           axios
-            .post(`${process.env.REACT_APP_API_URL}/login`, {
+            .post(`${process.env.REACT_APP_API_URL}/admin`, {
               email,
               password: password1
             })
@@ -37,21 +40,15 @@ function Login({ history }) {
                   password1: '',
                   textChange: 'Submitted'
                 });
+                alert(res.data.message)
                 isAuth() && isAuth().role === 'Seller'
                   ? history.push('/admin')
-                  : history.push('/private');
+                  : history.push('/AdminDash');
                 toast.success(`Hey ${res.data.user.name}, Welcome back!`);
               });
             })
             .catch(err => {
-              setFormData({
-                ...formData,
-                email: '',
-                password1: '',
-                textChange: 'Sign In'
-              });
-              console.log(err.response);
-              toast.error(err.response.data.errors);
+                localStorage.clear();
             });
         } else {
           toast.error('Please fill all fields');
@@ -59,7 +56,7 @@ function Login({ history }) {
       };
     return (
             <div className="Login">
-                {isAuth() ? <Redirect to='/' /> : null}
+               
                 <div className="forml">
                 <div class="wrapper ">
                     <div class="title-text ">
@@ -70,14 +67,14 @@ function Login({ history }) {
                     
                     <div class="form-container">
                         <div class="form-inner">
-                            <form saaction="#" class="login" onSubmit={handleSubmit}>
+                            <form action="/AdminDash" class="login"   method="POST"  onSubmit={handleSubmit}>
                                 <div class="field">
                                     <input type="email" placeholder="Email Address" required 
-                                    onChange={handleChange('email')}
+                                    onChange={handleChange('email')} name="email"
                                     value={email}/>
                                 </div>
                                 <div class="field">
-                                    <input type="password" placeholder="Password" required 
+                                    <input type="password" placeholder="Password" required name="password"
                                     onChange={handleChange('password1')}
                                     value={password1}/>
                                 </div>
@@ -87,7 +84,7 @@ function Login({ history }) {
                                 </div>
                                 <div class="field btn">
                                     <div class="btn-layer"></div>
-                                    <NavLink to="/adminDash"><input type="submit" value="Login" /></NavLink>
+                                    <input type="submit" value="Login" />
                                     
                                 </div>
                                 <div class="signup-link">

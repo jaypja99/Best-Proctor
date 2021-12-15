@@ -10,6 +10,7 @@ const Product = require('../models/product');
 const Feed = require('../models/feeds');
 const Seller = require('../models/seller')
 const Teacher = require('../models/school')
+const Admin = require('../models/admin')
 const Parent = require('../models/parent')
 
 const app = express();
@@ -67,6 +68,13 @@ router.get("/api", (req, res) => {
     School.find({}).then((data) => {
       
       res.json(data);
+    });
+  });
+
+  router.get("/admin", (req, res) => {
+    Admin.find({}).then((data) => {
+    res.json(data);
+    
     });
   });
 
