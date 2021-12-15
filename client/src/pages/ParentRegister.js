@@ -121,7 +121,7 @@ const ParentRegister = () => {
         setErrorMsg('Please enter all the field values.');
       }
     } catch (error) {
-      alert("Register Successfully")
+     
      
     }
 
@@ -316,7 +316,7 @@ const ParentRegister = () => {
           <div>
             <label class="formlabel">Contact number<span class="required">*</span></label>
             <input
-              type="text"
+              type="number"
               required
               name="contactNumber"
               value={state.contactNumber}

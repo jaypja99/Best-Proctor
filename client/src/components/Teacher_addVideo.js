@@ -7,8 +7,8 @@ import Dropzone from 'react-dropzone';
 import { API_URL } from '../utils/constants';
 
 
-const Teacher_addAssignment = () => {
-    const [file, setFile] = useState(null); // state for storing actual image
+const Teacher_addVideo = () => {
+   
     const [state, setState] = useState({
         Standard: '',
         Subjects: '',
@@ -36,7 +36,7 @@ const Teacher_addAssignment = () => {
                 description
             } = state;
             if (Subjects.trim() !== '' && Standard.trim()) {
-                if (file) {
+                
                     const formData = new FormData();
 
                     formData.append('Standard', Standard);
@@ -57,10 +57,8 @@ const Teacher_addAssignment = () => {
                         description: ''
                     })
 
-                }
-                else {
-                    setErrorMsg('Please select a file to add.');
-                }
+               
+              
             } else {
                 setErrorMsg('Please enter all the field values.');
             }
@@ -145,4 +143,4 @@ const Teacher_addAssignment = () => {
     );
 };
 
-export default Teacher_addAssignment
+export default Teacher_addVideo

@@ -18,7 +18,7 @@ const parentSchema = mongoose.Schema(
       trim: true
     },
     Age: {
-      type: String,
+      type: Number,
       required: true,
       trim: true
     },
@@ -62,7 +62,7 @@ const parentSchema = mongoose.Schema(
         required:true
     },
     contactNumber:{
-      type:String,
+      type:Number,
       required:true
   },
     

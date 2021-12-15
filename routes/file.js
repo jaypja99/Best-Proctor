@@ -9,6 +9,7 @@ const Parent = require('../models/parent')
 const Product = require('../models/product')
 const Assignment = require('../models/assignment')
 const Feeds = require('../models/feeds')
+const Videolink = require('../models/videolink')
 const Router = express.Router();
 
 const upload = multer({
@@ -160,6 +161,31 @@ Router.post(
         description, 
         file_path: path,
         file_mimetype: mimetype
+      });
+      await file.save();
+      res.send('file uploaded successfully.');
+    } catch (error) {
+      res.status(400).send('Error while uploading file. Try again later.');
+    }
+  },
+  (error, req, res, next) => {
+    if (error) {
+      res.status(500).send(error.message);
+    }
+  }
+);
+
+Router.post(
+  '/videolink',
+  uploads.single('file'),
+  async (req, res) => {
+    try {
+      const {Standard,Subjects,description} = req.body;
+    
+      const file = new Videolink({
+        Subjects,  
+        Standard, 
+        description
       });
       await file.save();
       res.send('file uploaded successfully.');
