@@ -13,6 +13,7 @@ function Login({ history }) {
         password1: '',
         textChange: 'Sign In'
       });
+      
     const { email, password1, textChange } = formData;
     const handleChange = text => e => {
         setFormData({ ...formData, [text]: e.target.value });
@@ -82,7 +83,7 @@ function Login({ history }) {
                                     value={password1}/>
                                 </div>
                                 <div class="pass-link">
-                                    <a href="#">Forgot password?</a>
+                                     <NavLink activeClassName="active" to="/ForgetPassword">Forgot password?</NavLink>
                                 </div>
                                 <div class="field btn">
                                     <div class="btn-layer"></div>

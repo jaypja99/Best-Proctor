@@ -94,7 +94,7 @@ const Login = ({ history }) => {
                     value={password1} />
                 </div>
                 <div class="pass-link">
-                  <a href="#">Forgot password?</a>
+                <NavLink activeClassName="active" to="/ForgetPassword">Forgot password?</NavLink>
                 </div>
                 <div class="field btn">
                   <div class="btn-layer"></div>

@@ -27,6 +27,7 @@ import SS from './pages/SS';
 import Computer from './pages/Computer'
 import Hindi from './pages/Hindi';
 import English from './pages/English'
+import ForgetPassword from './pages/ForgetPassword'
 import Teacher_addFeeds from "./components/Teacher_addFeeds";
 
 function App() {
@@ -68,6 +69,8 @@ function App() {
           <Route path='/admin/schoolReq' exact render={props => <SchoolReq {...props} />} />
           <Route path='/productReq' exact render={props => <ProductReq {...props} />} />
           <Route path='/NewsFeed' exact render={props => <FeedReq {...props} />} />
+
+          <Route path='/ForgetPassword' exact render={props => <ForgetPassword {...props} />} />
 
           
 

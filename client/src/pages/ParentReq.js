@@ -12,6 +12,8 @@ const Sellerdash = () => {
 
 
 
+
+
   const getCovidData = async () => {
 
     try {
@@ -20,7 +22,7 @@ const Sellerdash = () => {
       const res = await fetch("http://localhost:5000/app/parent");
       const ActualData = await res.json();
       console.log(ActualData);
-      setData(ActualData.filter((x) => x.Standard=== "First"));
+      setData(ActualData.filter((x) => x.Standard=== datalist));
     } catch (error) {
       console.log(error);
     }
@@ -41,7 +43,7 @@ const Sellerdash = () => {
           <div className='std'> 
                         <label >Standard<span class="required">*</span></label>
                         <input name="Standard" id="Standard" list="standards"  
-                            required value={state.Standard} 
+                            required value={state.Standard} onChange={getCovidData}
                         />
                         <datalist id="standards">
                             <option value="First">First</option>
