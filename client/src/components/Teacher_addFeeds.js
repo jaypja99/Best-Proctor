@@ -95,7 +95,7 @@ const Teacher_addFeeds = () => {
             <Form
                 onSubmit={handleOnSubmit}
             >
-                <h3>Upload New Feeds</h3>
+                <h3>Upload New Feeds or Announcement</h3>
                 <div className="Sellerdash">
                     <div className='rowC'>
                         <div>
@@ -147,18 +147,18 @@ const Teacher_addFeeds = () => {
                                 </div>
 
                                 <div>
-                                    <label >Notify by mail<span class="required">*</span></label>
+                                    <label >Notify by Select<span class="required">*</span></label>
                                     <div class="redioback">
                                         <div class="fielddiv">
 
                                             <div class="privatediv">
-                                                <label class="container1">Yes
+                                                <label class="container1">Announcements
                                                     <input type="radio" name="Notify" required id="Yes" value="Yes" onChange={handleInputChange} />
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>
                                             <div class="govermentdiv">
-                                                <label class="container1">No
+                                                <label class="container1">News Feeds
                                                     <input type="radio" name="Notify" required id="No" value="No" onChange={handleInputChange} />
                                                     <span class="checkmark"></span>
                                                 </label>

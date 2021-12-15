@@ -75,7 +75,7 @@ const Login = ({ history }) => {
                         field1='shadows nonActives'
                         field2='shadows nonActives'
                       />
-                   1 </div>
+                    </div>
                     <div class="form-container">
                         <div class="form-inner">
                         <form action="/sellerLogin" class="login"   method="POST" onSubmit={handleSubmit}>
