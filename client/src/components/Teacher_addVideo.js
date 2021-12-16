@@ -12,6 +12,7 @@ const Teacher_addVideo = () => {
     const [state, setState] = useState({
         Standard: '',
         Subjects: '',
+        filename:'',
         description: ''
     });
     const [errorMsg, setErrorMsg] = useState('');
@@ -33,14 +34,16 @@ const Teacher_addVideo = () => {
             const {
                 Standard,
                 Subjects,
+                filename,
                 description
             } = state;
-            if (Subjects.trim() !== '' && Standard.trim()) {
+            if (Subjects.trim() !== '' && Standard.trim() && filename.trim() !== '' && description.trim() !== '') {
                 
                     const formData = new FormData();
 
                     formData.append('Standard', Standard);
                     formData.append('Subjects', Subjects);
+                    fromData.append('filename',filename);
                     formData.append('description', description);
 
 
@@ -54,6 +57,7 @@ const Teacher_addVideo = () => {
                     this.setState({
                         Standard: '',
                         Subjects: '',
+                        filename: '',
                         description: ''
                     })
 
@@ -115,7 +119,16 @@ const Teacher_addVideo = () => {
                             <option value="Social Science">Social Science</option>
                         </datalist>
                     </div>
+                    <div>
+                        <label >File Name<span class="required">*</span></label>
 
+                        <input
+                            type="text"
+                            required
+                            name="filename"
+                            value={state.filename}
+                            onChange={handleInputChange} />
+                    </div>
 
 
                 </div>
