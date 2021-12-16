@@ -43,7 +43,7 @@ const Teacher_addVideo = () => {
 
                     formData.append('Standard', Standard);
                     formData.append('Subjects', Subjects);
-                    fromData.append('filename',filename);
+                    formData.append('filename',filename);
                     formData.append('description', description);
 
 

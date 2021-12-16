@@ -12,6 +12,11 @@ const videoSchema = mongoose.Schema(
       required: true,
       trim: true
     },
+    filename: {
+      type: String,
+      required: true,
+      trim: true
+    },
     description:{
       type: String,
       required: true,

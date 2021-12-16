@@ -180,15 +180,17 @@ Router.post(
   uploads.single('file'),
   async (req, res) => {
     try {
-      const {Standard,Subjects,description} = req.body;
+      const {Standard,Subjects,filename,description} = req.body;
     
       const file = new Videolink({
         Subjects,  
         Standard, 
+        filename,
         description
       });
       await file.save();
       res.send('file uploaded successfully.');
+  
     } catch (error) {
       res.status(400).send('Error while uploading file. Try again later.');
     }
