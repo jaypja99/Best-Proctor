@@ -212,6 +212,21 @@ router.post("/parentLogin", (req, res)=> {
   })
 }) 
 
+router.post("/admin", (req, res)=> {
+  signinController
+  const { email, password} = req.body
+  Admin.findOne({ email: email}, (err, user) => {
+      if(user){
+          if(password === user.password ) {
+              res.send({message: "Login Successfull", user: user})
+          } else {
+              res.send({ message: "Password didn't match"})
+          }
+      } else {
+          res.send({message: "User not registered"})
+      }
+  })
+}) 
 
   router.get('/getAllFiles', async (req, res) => {
     try {

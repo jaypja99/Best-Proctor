@@ -14,12 +14,12 @@ const SellerRegister = () => {
   const [state, setState] = useState({
     sellerName: '',
     shopName: '',
-    contactNumber:'',
-    addressLine:'',
-    city:'',
-    email:'',
-    username:'',
-    password:''
+    contactNumber: '',
+    addressLine: '',
+    city: '',
+    email: '',
+    username: '',
+    password: ''
   });
   const [errorMsg, setErrorMsg] = useState('');
   const [isPreviewAvailable, setIsPreviewAvailable] = useState(false); // state to show preview only for images
@@ -42,16 +42,16 @@ const SellerRegister = () => {
 
   const handleOnSubmit = async (event) => {
     event.preventDefault();
-    
+
     try {
-      const {sellerName,
+      const { sellerName,
         shopName,
         contactNumber,
         addressLine,
         city,
         email,
         username,
-        password} = state;
+        password } = state;
       if (shopName.trim() !== '' && sellerName.trim() !== '' && contactNumber.trim() !== '' && addressLine.trim() !== '' && city.trim() !== '' && email.trim() !== '' && username.trim() !== '' && password.trim() !== '') {
         if (file) {
           const formData = new FormData();
@@ -64,29 +64,29 @@ const SellerRegister = () => {
           formData.append('email', email);
           formData.append('username', username);
           formData.append('password', password);
-          
 
-  
+
+
           setErrorMsg('');
           await axios.post(`${API_URL}/Seller`, formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
-            
+
           });
           this.setState({
             sellerName: '',
             shopName: '',
-            contactNumber:'',
-            addressLine:'',
-            city:'',
-            email:'',
-            username:'',
-            password:''
+            contactNumber: '',
+            addressLine: '',
+            city: '',
+            email: '',
+            username: '',
+            password: ''
           })
 
-       
-   
+          alert("Register Successfully")
+
         } else {
           alert("Please select a file to add.")
           setErrorMsg('Please select a file to add.');
@@ -96,8 +96,8 @@ const SellerRegister = () => {
         setErrorMsg('Please enter all the field values.');
       }
     } catch (error) {
-      alert("Register Successfully")
      
+
     }
 
   };
@@ -105,7 +105,7 @@ const SellerRegister = () => {
   const onDrop = (files) => {
     const [uploadedFile] = files;
     setFile(uploadedFile);
-  
+
     const fileReader = new FileReader();
     fileReader.onload = () => {
       setPreviewSrc(fileReader.result);
@@ -128,41 +128,43 @@ const SellerRegister = () => {
         <div class="grid-container">
           <div>
             <label class="formlabel">Shop Name<span class="required">*</span></label>
-            <input 
-                type="text"
-                required 
-                name="shopName"
-                value={state.shopName}
-                onChange={handleInputChange}/>
+            <input
+              type="text"
+              required
+              name="shopName"
+              value={state.shopName}
+              onChange={handleInputChange} />
           </div>
- 
+
           <div>
             <label class="formlabel">Seller Name<span class="required">*</span></label>
-            <input 
-                type="text"
-                required 
-                name="sellerName"
-                value={state.sellerName}
-                onChange={handleInputChange} />
+            <input
+              type="text"
+              required
+              name="sellerName"
+              value={state.sellerName}
+              onChange={handleInputChange} />
           </div>
 
           <div>
             <label >Contact Number<span class="required">*</span></label>
-            <input 
-                type="text" 
-                required 
-                name="contactNumber"
-                value={state.contactNumber}
-                onChange={handleInputChange} />
+            <input
+              type="tel"
+              required
+              pattern='[0-9]{1}[0-9]{9}'
+             
+              name="contactNumber"
+              value={state.contactNumber}
+              onChange={handleInputChange} />
           </div>
           <div>
             <label >Address Line<span class="required">*</span></label>
-            <input 
-                type="text" 
-                required 
-                name="addressLine"
-                value={state.addressLine}
-                onChange={handleInputChange} />
+            <input
+              type="text"
+              required
+              name="addressLine"
+              value={state.addressLine}
+              onChange={handleInputChange} />
           </div>
           <div class="fielddiv">
             <div class="statediv">
@@ -209,79 +211,79 @@ const SellerRegister = () => {
             </div>
             <div class="citydiv">
               <label >City<span class="required">*</span></label>
-              <input 
-                  type="text" 
-                  required 
-                  name="city"
-                  value={state.city}
-                  onChange={handleInputChange}/>
+              <input
+                type="text"
+                required
+                name="city"
+                value={state.city}
+                onChange={handleInputChange} />
             </div>
           </div>
           <div>
             <label >Email id<span class="required">*</span></label>
-            <input 
-              type="text" 
-              required 
+            <input
+              type="text"
+              required
               name="email"
               value={state.email}
-              onChange={handleInputChange}/>
+              onChange={handleInputChange} />
           </div>
 
           <div>
             <label >Username for Login<span class="required">*</span></label>
-            <input 
-                type="text" 
-                required 
-                name="username"
-                value={state.username}
-                onChange={handleInputChange} />
+            <input
+              type="text"
+              required
+              name="username"
+              value={state.username}
+              onChange={handleInputChange} />
           </div>
           <div >
             <label class="formlabel">Password<span class="required">*</span></label>
-            <input 
-                type="text" 
-                required 
-                name="password"
-                value={state.password}
-                onChange={handleInputChange} />
+            <input
+              type="text"
+              required
+              name="password"
+              value={state.password}
+              onChange={handleInputChange} />
           </div>
           <div>
             <label >Confirm Password<span class="required">*</span></label>
-            <input type="text" id="lname" name="lname"  />
+            <input type="text" id="lname" name="lname" />
           </div>
-          
+
           <div className="upload-section">
-          <Dropzone onDrop={onDrop} className="abc">
-            {({ getRootProps, getInputProps }) => (
-              <div {...getRootProps({ className: 'drop-zone abc' })} ref={dropRef}>
-                <input {...getInputProps() }  />
-                <p>Drag and drop a file OR click here to select a file</p>
-                {file && (
-                  <div>
-                    <strong>Selected file:</strong> {file.name}
-                  </div>
-                )}
-                
-                
-              </div>
-            )}
-          </Dropzone>
-          {previewSrc ? (
-            isPreviewAvailable ? (
-              <div className="image-preview">
-                <img className="preview-image" src={previewSrc} alt="Preview" />
-              </div>
+            <Dropzone onDrop={onDrop} className="abc">
+              {({ getRootProps, getInputProps }) => (
+                <div {...getRootProps({ className: 'drop-zone abc' })} ref={dropRef}>
+                  <input {...getInputProps()} />
+                  <p>Drag and drop a file OR click here to select a file</p>
+                  {file && (
+                    <div>
+                      <strong>Selected file:</strong> {file.name}
+                    </div>
+                  )}
+
+
+                </div>
+              )}
+            </Dropzone>
+            {previewSrc ? (
+              isPreviewAvailable ? (
+                <div className="image-preview">
+                  <img className="preview-image" src={previewSrc} alt="Preview" />
+                </div>
+              ) : (
+                <div className="preview-message">
+                  <p>No preview available for this file</p>
+                </div>
+              )
             ) : (
               <div className="preview-message">
-                <p>No preview available for this file</p>
+                <p>Image preview will be shown here after selection</p>
               </div>
-            )
-          ) : (
-            <div className="preview-message">
-              <p>Image preview will be shown here after selection</p>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
         </div>
 
         <div class="regbtndiv">

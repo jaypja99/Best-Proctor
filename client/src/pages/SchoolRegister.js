@@ -93,14 +93,14 @@ const SchoolRegister = () => {
             username: '',
             password: ''
           })
-        
+          alert("Register Successfully")
       } 
      else {
       alert("Please enter all the field values.")
       setErrorMsg('Please enter all the field values.');
     }
   } catch (error) {
-    alert("Register Successfully")
+ //   alert("Register Successfully")
    
   }
 
@@ -150,7 +150,9 @@ const SchoolRegister = () => {
           </div>
           <div>
             <label >Contact Number<span class="required">*</span></label>
-            <input type="text" id="contactNumber" name="contactNumber" required value={state.contactNumber}
+            <input  type="tel"
+              required
+              pattern='[0-9]{1}[0-9]{9}' id="contactNumber" name="contactNumber" required value={state.contactNumber}
               onChange={handleInputChange} />
           </div>
           <div>
@@ -227,7 +229,9 @@ const SchoolRegister = () => {
           </div>
           <div>
             <label class="formlabel">Admin Contact number<span class="required">*</span></label>
-            <input type="text" id="adminNumber" name="adminNumber" required value={state.adminNumber}
+            <input  type="tel"
+              required
+              pattern='[0-9]{1}[0-9]{9}' id="adminNumber" name="adminNumber" required value={state.adminNumber}
               onChange={handleInputChange} />
           </div>
           <div>

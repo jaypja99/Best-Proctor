@@ -6,6 +6,7 @@ const Files = require('../models/file_achive');
 const Seller = require('../models/seller')
 const School = require('../models/school')
 const Parent = require('../models/parent')
+const Admin = require('../models/admin')
 const Product = require('../models/product')
 const Assignment = require('../models/assignment')
 const Feeds = require('../models/feeds')
@@ -106,6 +107,7 @@ Router.post(
       });
       await file.save();
       res.send('file uploaded successfully.');
+      
     } catch (error) {
       res.status(400).send('Error while uploading file. Try again later.');
     }
@@ -317,6 +319,29 @@ Router.post(
        
       });
       await file.save();
+      
+      res.send('file uploaded successfully.');
+    } catch (error) {
+      res.status(400).send('Error while uploading file. Try again later.');
+    }
+  },
+ 
+);
+
+
+Router.post(
+  '/admin',
+  uploads.single('file'),
+  async (req, res) => {
+    try {
+      const {email,password} = req.body;
+      const file = new Admin({
+        email,
+        password 
+       
+      });
+      await file.save();
+      
       res.send('file uploaded successfully.');
     } catch (error) {
       res.status(400).send('Error while uploading file. Try again later.');

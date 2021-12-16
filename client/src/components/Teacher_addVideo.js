@@ -137,8 +137,9 @@ const Teacher_addVideo = () => {
                         <label >Add Video Link<span class="required">*</span></label>
 
                         <input
-                            type="text"
+                            type="url"
                             required
+                            pattern="https?://.+"
                             name="description"
                             value={state.description}
                             onChange={handleInputChange} />

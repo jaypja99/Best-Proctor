@@ -6,42 +6,43 @@ import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import { authenticate, isAuth } from '../helpers/auth';
 import { Link, Redirect } from 'react-router-dom';
-function Login({ history }) {
-    
+const Login = ({ history }) => {
   const dotenv = require('dotenv')
   dotenv.config()
 
-    const [formData, setFormData] = useState({
-        email: '',
-        password1: '',
-        textChange: 'Sign In'
-      });
-    const { email, password1, textChange } = formData;
-    const handleChange = text => e => {
-        setFormData({ ...formData, [text]: e.target.value });
-      };
-    
-       
-    const handleSubmit = e => {
-        console.log(process.env.REACT_APP_API_URL);
-        e.preventDefault();
-        if (email && password1) {
-          setFormData({ ...formData, textChange: 'Submitting' });
-          axios
-            .post(`${process.env.REACT_APP_API_URL}/admin`, {
-              email,
-              password: password1
-            })
-            .then(res => {
-              authenticate(res, () => {
-                setFormData({
-                  ...formData,
-                  email: '',
-                  password1: '',
-                  textChange: 'Submitted'
-                });
-                alert(res.data.message)
-                isAuth() && isAuth().role === 'Seller'
+
+  const [formData, setFormData] = useState({
+    email: '',
+    password1: '',
+    textChange: 'Sign In'
+  });
+  const { email, password1, textChange } = formData;
+  const handleChange = text => e => {
+    setFormData({ ...formData, [text]: e.target.value });
+  };
+
+
+  const handleSubmit = e => {
+
+    console.log(process.env.REACT_APP_API_URL);
+    e.preventDefault();
+    if (email && password1) {
+      setFormData({ ...formData, textChange: 'Submitting' });
+      axios
+        .post(`${process.env.REACT_APP_API_URL}/admin`, {
+          email,
+          password: password1
+        })
+         .then(res => {
+          authenticate(res, () => {
+            setFormData({
+              ...formData,
+              email: '',
+              password1: '',
+              textChange: 'Submitted'
+            });
+            alert(res.data.message)
+                isAuth() && isAuth().role === 'undefined'
                   ? history.push('/admin')
                   : history.push('/AdminDash');
                 toast.success(`Hey ${res.data.user.name}, Welcome back!`);

@@ -311,8 +311,9 @@ const ParentRegister = () => {
           <div>
             <label class="formlabel">Contact number<span class="required">*</span></label>
             <input
-              type="text"
+              type="tel"
               required
+              pattern='[0-9]{1}[0-9]{9}'
               name="contactNumber"
               value={state.contactNumber}
               onChange={handleInputChange} />

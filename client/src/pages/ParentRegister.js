@@ -115,13 +115,14 @@ const ParentRegister = () => {
           password: ''
         })
 
+        alert("Register Successfully")
       }
       else {
         alert("Please enter all the field values.")
         setErrorMsg('Please enter all the field values.');
       }
     } catch (error) {
-     
+    
      
     }
 
@@ -326,7 +327,7 @@ const ParentRegister = () => {
           <div>
             <label >Email id<span class="required">*</span></label>
             <input
-              type="text"
+              type="email"
               required
               name="email"
               value={state.email}
