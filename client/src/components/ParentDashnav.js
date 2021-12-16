@@ -32,9 +32,9 @@ const Dashnav = (props1) => {
                             <li>
                                 <NavLink to="/parentdashboard" className={props1.f1}>
                                     <i class="bx bx-grid-alt"></i>
-                                    <span class="links_name">Home</span>
+                                    <span class="links_name">Time Table</span>
                                 </NavLink>
-                                <span class="tooltip">Home</span>
+                                <span class="tooltip">Time Table</span>
                             </li>
                             <li>
                                 <NavLink to="/parentdashboard/feedReq" className={props1.f2}>

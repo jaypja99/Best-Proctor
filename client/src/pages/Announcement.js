@@ -15,7 +15,7 @@ const Sellerdash = () => {
       const res = await fetch("http://localhost:5000/app/feed");
       const ActualData = await res.json();
       console.log(ActualData);
-      setData(ActualData.filter((x) => x.Notify === "No"));
+      setData(ActualData.filter((x) => x.Notify === "Yes"));
     } catch (error) {
       console.log(error);
     }
@@ -34,7 +34,7 @@ const Sellerdash = () => {
           <div className='sideright'>
             <Dashtop />
             <News_top
-            f2="cba"
+            f1="cba"
             />
             <div className='dash'>
               

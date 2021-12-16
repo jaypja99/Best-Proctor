@@ -30,12 +30,23 @@
 
 .catmaterial{
   height: 100px;
-  margin-left: 180px;
-  margin-right: 180px;
+  margin-left: 280px;
+  margin-right: 780px;
   border-radius: 10px;
   background-color: white;
     margin-top: -50px;
 }
+
+.catmaterial1{
+  height: 100px;
+  margin-left: 480px;
+  margin-right: 480px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: white;
+    margin-top: -50px;
+}
+
 
 .background{
   padding: 40px;
@@ -52,6 +63,7 @@
   height: 100px;
   padding: 5px;
 }
+
 
 .catlayout{
   

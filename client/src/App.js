@@ -23,6 +23,7 @@ import FeedReq from './pages/FeedReq';
 import ParentReq from './pages/ParentReq';
 import Materials from './pages/Download_Notes'
 import Science from './pages/Science'
+import Announcement from './pages/Announcement';
 import SS from './pages/SS';
 import Computer from './pages/Computer'
 import Hindi from './pages/Hindi';
@@ -51,7 +52,7 @@ function App() {
           <Route path='/sellerdashboard' exact render={props => <Sellerdash {...props} />} />
           <Route path='/parentdashboard' exact render={props => <ParentDash {...props} />} />
           <Route path='/teacherDashboard' exact render={props => <TeacherDash {...props} />} />
-
+          <Route path='/parentdashboard/announcement' exact render={props => <Announcement {...props} />} />
           <Route path='/parentdashboard/productReq' exact render={props => <ProductReq {...props} />} />
           <Route path='/parentdashboard/feedReq' exact render={props => <FeedReq {...props} />} />
           <Route path='/parentdashboard/material' exact render={props => <Materials {...props} />} />

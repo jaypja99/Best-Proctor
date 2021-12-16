@@ -26,13 +26,7 @@ const Dashnav = (props1) => {
 
                     <ul class="nav-list">
                         <div className="nav_selection">
-                            <li>
-                                <NavLink to="/teacherDashboard" className={props1.f1}>
-                                    <i class="bx bx-grid-alt"></i>
-                                    <span class="links_name">Home</span>
-                                </NavLink>
-                                <span class="tooltip">Home</span>
-                            </li>
+                         
                             <li>
                                 <NavLink to="/teacherDashboard/addFeed" className={props1.f2}>
                                     <i class="fas fa-newspaper"></i>

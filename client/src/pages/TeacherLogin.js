@@ -48,7 +48,7 @@ const Login = ({ history }) => {
               alert(res.data.message)
               isAuth() && isAuth().role === 'undefined'
                 ? history.push('/')
-                : history.push('/teacherDashboard');
+                : history.push('/teacherDashboard/addFeed');
             
             });
           }).catch((err)=>{

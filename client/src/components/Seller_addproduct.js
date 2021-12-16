@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import "../components/Seller_addproduct.css";
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import axios from 'axios';
@@ -8,6 +8,24 @@ import { API_URL } from '../utils/constants';
 
 
 const Seller_addproduct = () => {
+
+
+    const [data, setData] = useState([]);
+    const getProductData = async () => {
+        try {
+          const res = await fetch("http://localhost:5000/app/school");
+          const ActualData = await res.json();
+          console.log(ActualData);
+          setData(ActualData);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    
+      useEffect(() => {
+        getProductData();
+      }, []);
+
     const [file, setFile] = useState(null); // state for storing actual image
     const [previewSrc, setPreviewSrc] = useState('');
     const [state, setState] = useState({
@@ -115,16 +133,20 @@ const Seller_addproduct = () => {
 
 
                             <div>
-                                <label >School name<span class="required">*</span></label>
-                                <input name="schoolname" id="schoolname" list="names"
-                                    required value={state.schoolname} onChange={handleInputChange}
-                                />
-                                <datalist id="names">
-                                    <option value="01">01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
+                                <label >School Name<span class="required">*</span></label>
+                                <input name="schoolName" id="schoolName" list="schoolNames" required value={state.schoolName} onChange={handleInputChange} />
+
+                                <datalist id="schoolNames">
+                                    {data.map((curElem, ind) => {
+                                        return (
+                                            <option value={curElem.schoolName}>{curElem.schoolName}</option>
+                                        );
+                                    })}
                                 </datalist>
+
+
                             </div>
+                        
                             <div>
                                 <label >Standard<span class="required">*</span></label>
                                 <input name="Standard" id="Standard" list="standards"
@@ -221,7 +243,7 @@ const Seller_addproduct = () => {
                                 {previewSrc ? (
                                     isPreviewAvailable ? (
                                         <div className="image-preview">
-                                           
+
                                             <img className="preview-image" src={previewSrc} alt="Preview" />
                                         </div>
                                     ) : (
@@ -237,7 +259,7 @@ const Seller_addproduct = () => {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="regbtndiv1">
                     <button type="submit" class="registerbtn">
